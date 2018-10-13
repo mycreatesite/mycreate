@@ -1,0 +1,156 @@
+body#tinymce.wp-editor {
+  font-size:85%;
+  color: #1e1e1e;
+  font-family: "Helvetica", "Segoe UI", "メイリオ", sans-serif;
+  letter-spacing: 1.5px;
+  line-height: 1.5;
+}
+
+a {
+  color: #2d9896;
+  padding: 0 3px;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+p {
+  line-height: 2;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border-bottom: solid 2px #4bc9c7;
+  position: relative;
+}
+
+h2:after {
+  position: absolute;
+  content: '';
+  display: block;
+  border-bottom: solid 2px #C9C74B;
+  bottom: -2px;
+  width: 30%;
+}
+
+h2, h3, h4 {
+  line-height: 1.8;
+  margin: 0 0 10px 0;
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+h5 {
+  position: relative;
+  display: inline-block;
+  padding: 20px;
+  margin: 1rem 1.5rem;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+
+ul,ol {
+  display: inline-block;
+  margin: 1.5rem;
+}
+
+ul {
+  border: solid 2px #b5e9e8;
+  border-radius: 3px;
+  padding: 1.5em 2.4em 1.5em 55px;
+  position: relative;
+}
+
+ul li {
+  line-height: 1.5;
+  padding: 0.5em 0;
+  list-style-type: none!important;
+}
+
+ul li:before {
+  content: '';
+  position: absolute;
+  left : 2.2em;
+  color: #4bc9c7;
+}
+
+ol {
+  counter-reset: number;
+  list-style-type: none!important;
+  padding: 1.7em;
+  border-radius: 3px;
+  border: solid 2px #b5e9e8;
+}
+
+ol li{
+  position: relative;
+  line-height: 1.5em;
+  padding: 0.5em 0.5em 0.5em 35px;
+}
+
+ol li:before{
+  position: absolute;
+  counter-increment: number;
+  content: counter(number);
+  display:inline-block;
+  background: #4bc9c7;
+  color: #fff;
+  font-family: 'Avenir','Arial Black','Arial',sans-serif;
+  font-size: 0.7rem;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  padding-left: 0.5px;
+  margin-left: 5px;
+  border-radius: 2px;
+  text-align:center;
+  top: 50%;
+	transform: translateY(-50%);
+}
+
+hr {
+  border: 1px solid #E5E5E5;
+  border-bottom: none;
+}
+
+pre, blockquote {
+  margin: 1rem 1.5rem;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  font-family: "Helvetica", "Segoe UI", "メイリオ", sans-serif;
+}
+
+pre {
+  display: block;
+  line-height: 2;
+  background-color: #333a46;
+  color: #dcdfe6;
+  word-wrap: normal;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+blockquote {
+  display: inline-block;
+  background-color: #f5f5f5;
+}

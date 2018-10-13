@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="ma-ya's CREATE家のアイドル、「よもぎ」こと「もぎたん」が時を計る…！！" />
+	<title>もぎタイマー</title>
+	<link href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet" />
+	<link rel="shortcut icon" href="https://myscreate.com/wp-content/themes/mycreate/pages/mogi_timer/img/mogi_favicon.ico">
+  <link rel="apple-touch-icon" href="https://myscreate.com/wp-content/themes/mycreate/pages/mogi_timer/img/mogi_touch_icon.png" />
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+
+<main class="mogiTimer">
+	<div class="container">
+		<figure class="mogiArea">
+			<img id="mogitan" class="mogitan" src="./img/mogitan.png">
+		</figure>
+		<h1 class="heading">mogitan timer</h1>
+		<section class="setTimer">
+			<fieldset>
+				<input id="setMin" type="number" min="0" max="60" value=""><label for="setMin"> 分</label>
+				<input id="setSec" type="number" min="0" max="59" value=""><label for="setSec"> 秒</label>
+			</fieldset>
+		</section>
+		<section class="timer">
+			<span id="min"></span>：<span id="sec"></span>
+		</section>
+		<section class="buttons">
+			<input class="btn btn--start" id="start" type="button" value="START">
+			<input class="btn btn--stop" id="stop" type="button" value="STOP" disabled>
+			<input class="btn btn--clear" id="clear" type="button" value="CLEAR">
+		</section>
+		<section id="baloon" class="baloon">
+			<p class="talk"><span id="minTalken"></span>分<span id="secTalken"></span>秒<br>たったもぎ！</p>
+			<div id="modalClose" class="modalClose">
+				<p>閉じる</p>
+				<p>✖</p>
+			</div>
+		</section>
+	</div>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "メイリオ",sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.wrapper{
+  position:relative;
+  margin:100px auto 0;
+  width: 750px;
+  height: 750px;
+}
+#test {
+  position:relative;
+  width: 100%;
+  height: 100%;
+  border-radius:50%;
+  border: 20px solid rgb(60,60,60);
+}
+
+#test p {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  color:white;
+  font-size: 50px;
+  font-weight:bold;
+  text-align:center;
+  text-shadow:1px 1px 1px rgba(0,0,0,0.5);
+  white-space: nowrap;
+}
+
+img {
+  position:absolute;
+  width:400px;
+  height:auto;
+  top: 400px;
+  left: 465px;
+  transform: rotate(10deg);
+  transition: transform 0.3s ease;
+}
+.rotate {
+  transform: rotate(17deg);
+}
+/*//////////////////////////////スマホ///////////////////////////*/
+@media screen and (max-width: 900px){
+.wrapper{
+  margin:45% auto 0;
+  width: 90vw;
+  height: 90vw;
+}
+#test {
+  border: 10px solid rgb(60,60,60);
+}
+#test p {
+  font-size:7vw;
+  top: 52%;
+  line-height: 1.4;
+}
+img {
+  width:70%;
+  top:-50%;
+  left: 16%;
+}
+
+
+/*//////////////////////////////スマホ///////////////////////////*/
+}
