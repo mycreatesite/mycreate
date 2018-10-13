@@ -1,10 +1,10 @@
-# ma-ya's CREATE
+# ma-ya's CREATE -website-
 
 ## What's this site?
 
 ma-ya's CREATEのポートフォリオサイトです。
 
-WordPress独自テーマとして制作。
+WordPressオリジナルテーマとして制作。
 
 ## How's it created?
 
