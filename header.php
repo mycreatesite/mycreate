@@ -38,7 +38,6 @@
         ];
         date_default_timezone_set('Asia/Tokyo');
         $getHour = date('H');
-        $greetChoice = "HELLO.";
         if ($getHour > 16) {
           $greetChoice = $myGreet[2];
         } else if ($getHour > 10) {
