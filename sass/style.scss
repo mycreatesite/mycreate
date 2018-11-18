@@ -1680,10 +1680,11 @@ a.noContents {
   height: 100vh;
   background-color: $footerBgColor;
   transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  will-change: transform;
 }
 
 .loadingFade {
-  transform: translateY(-150%);
+  transform: translateY(-100%) skewY(-5deg);
 }
 
 .loadingContents {
