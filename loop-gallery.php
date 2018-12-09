@@ -45,6 +45,6 @@
           <?php endif;?>
         <?php endif;?>
 
-        <div class="forShow2">
+        <div class="forShow1">
           <?php if(function_exists('wp_pagenavi')){wp_pagenavi();}?>
         </div>

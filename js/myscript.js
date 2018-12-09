@@ -39,7 +39,7 @@ jQuery(function(){
     for (var j = 0; len = forShows.length, j < len ; j++) {
       forShows[j].each(function(i){
         var forShowPoint = jQuery(this).offset().top - 30;
-        var delayTime = 100;
+        var delayTime = 90;
         if (scroll > forShowPoint - windowHeight){
           jQuery(this).delay(i*delayTime).queue(function(){
             jQuery(this).addClass('showUp');

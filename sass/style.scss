@@ -1752,8 +1752,8 @@ a.noContents {
 
 .forShow1,.forShow2,.forShow3,.forShow4 {
   opacity:0;
-  transform: translateY(50px);
-  transition: opacity 0.6s, transform 0.6s;
+  transform: translate(-10px,15px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 }
 
 .showUp {
