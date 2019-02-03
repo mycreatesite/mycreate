@@ -678,6 +678,7 @@ a {
 .skillsLayout {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom : 30px;
 }
 
 .skill {
@@ -2318,8 +2319,20 @@ html,body {
 }
 
 /*
+ ////////////////introduction-mobile////////////////
+*/
+
+#commentAnim {
+  margin-bottom : 45px;
+}
+
+/*
  ////////////////skills-mobile////////////////
 */
+
+.skillsLayout {
+  margin-bottom : 15px;
+}
 
 .skill {
   width: 100%;

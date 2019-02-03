@@ -77,6 +77,7 @@
             </div>
           </div>
         </div>
+        <a class="btn" href="/wp-content/themes/mycreate/pages/wicd/" target="_blank">features</a>
       </div>
     </section>
 
