@@ -1,7 +1,9 @@
 <footer class="footer">
   <div class="snsIconS">
-    <a href="https://twitter.com/hello_myscreate" target="_blank"><i class="fab fa-twitter snsIcon"></i></a>
-    <a href="https://www.facebook.com/myscreate/" target="_blank"><i class="fab fa-facebook-square snsIcon"></i></a>
+    <a href="https://twitter.com/hello_myscreate" target="_blank" rel="noopener"><i class="fab fa-twitter snsIcon"></i></a>
+    <a href="https://www.facebook.com/myscreate/" target="_blank" rel="noopener"><i class="fab fa-facebook-square snsIcon"></i></a>
+    <a href="https://github.com/mycreatesite/" target="_blank" rel="noopener"><i class="fab fa-github snsIcon"></i></a>
+    <a href="https://codepen.io/mycreatesite/" target="_blank" rel="noopener"><i class="fab fa-codepen snsIcon"></i></a>
   </div>
   <a href="<?php echo home_url();?>"><img class="logo-footer" src="<?php echo get_template_directory_uri(); ?>/img/myc_logo_w.svg" alt="ma-ya's CREATE [まーやずくりえいと]"></a>
   <p class="copyright">© Copyright 2018 │ ma-ya’s CREATE All rights reserved.</p>

@@ -1014,8 +1014,8 @@ textarea.formArea {
 }
 
 .snsIcon {
-  font-size: 2.5rem;
-  padding: 0 8px;
+  font-size: 2rem;
+  padding: 0 .5rem;
   transition: color 0.5s;
   &:hover {
     color: $themeColor;
@@ -2404,6 +2404,15 @@ html,body {
   font-size: 0.9rem;
   letter-spacing: 2px;
   padding:2px 7px;
+}
+
+/*
+ ////////////////footer-mobile////////////////
+*/
+
+.snsIcon {
+  font-size: 1.7rem;
+  padding: 0 .4rem;
 }
 
 /*
