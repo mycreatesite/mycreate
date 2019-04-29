@@ -2,6 +2,7 @@
   $arg = array(
     'orderby' => 'date', 
     'order' => 'DESC', 
+    'posts_per_page' => -1,
     's' => 'こまけぇこたぁいいんだよ ─ のんびりVue.js超入門',
   );
   $vuePosts = get_posts( $arg );
