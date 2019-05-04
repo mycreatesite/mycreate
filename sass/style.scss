@@ -1684,7 +1684,7 @@ a.noContents {
 }
 
 .loadingFade {
-  transform: translateY(-100%) skewY(-5deg);
+  transform: translate3d(0,-100%,0) skewY(-5deg);
 }
 
 .loadingContents {
