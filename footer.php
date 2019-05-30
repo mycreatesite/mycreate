@@ -35,7 +35,7 @@
 <script>jQuery(function(){var mycLogo=jQuery("#mycLogo").drawsvg({duration:1000,stagger:80,easing:"swing",callback:function(){jQuery("#mycLogo g").addClass("fillAnim")}});<?php if (is_home() || is_front_page()):?>setTimeout(function(){mycLogo.css("opacity",1).drawsvg("animate")},1800);<?php else:?>mycLogo.css("opacity",1).drawsvg("animate");<?php endif;?>});</script>
 <!--front-plugin-setting.js_minified-->
 <?php if (is_home() || is_front_page()):?>
-<script>jQuery(function(){var a=jQuery("#loadingArea");setTimeout(function(){a.addClass("loadingFade").fadeOut(700)},1500)});jQuery(function(){var a=jQuery("#myslider");a.juicyslider({mode:"cover",width:"100%",height:"100%",mask:"none",bgcolor:"#000",autoplay:8000,shuffle:false,show:{effect:"fade",duration:1500},hide:{effect:"fade",duration:1500}})});jQuery(function(){var a=new Rellax(".rellax")});</script>
+<script>jQuery(window).on("load",function(){var a=jQuery("#loadingArea");setTimeout(function(){a.addClass("loadingFade").fadeOut(600)},1500)});jQuery(function(){var a=jQuery("#myslider");a.juicyslider({mode:"cover",width:"100%",height:"100%",mask:"none",bgcolor:"#000",autoplay:8000,shuffle:false,show:{effect:"fade",duration:1500},hide:{effect:"fade",duration:1500}})});jQuery(function(){var a=new Rellax(".rellax")});</script>
 <?php endif;?>
 
 
