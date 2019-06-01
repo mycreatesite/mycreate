@@ -11,9 +11,10 @@ $contMaxW: 1100px;
 
 //z-index layer
 $zIndexLayer:(
-  upperLay: 20,
-  standardLay: 10,
   underLay: 5,
+  standardLay: 10,
+  upperLay: 20,
+  headerLay: 25,
   modalLay: 30,
   loadingLay: 40,
 );
@@ -392,7 +393,7 @@ a {
   right: 1.2rem;
   cursor: pointer;
   font-size: 1.2rem;
-  color: #282828;
+  color: #1e1e1e;
   padding: 10px;
   transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   &:hover {
@@ -492,7 +493,7 @@ a {
 
 .header {
   position: relative;
-  z-index: map-get($zIndexLayer,upperLay);
+  z-index: map-get($zIndexLayer,headerLay);
   padding: 70px 0 20px;
   text-align: center;
   background-color: #fff;
@@ -2145,6 +2146,10 @@ html,body {
  ////////////////modal-mobile////////////////
 */
 
+.modalArea {
+  background-color: rgb(30,30,30);
+}
+
 .modalInner {
   width: 85%;
 }
@@ -2210,10 +2215,15 @@ html,body {
   left: 0;
   width: 100%;
   height: 100%;
+  transform: translate3d(20px,-20px,0);
   font-size: 1.15rem;
   letter-spacing: 3.5px;
   color: #fff;
-  background-color: rgba(30,30,30,0.95);
+  background-color: rgb(30,30,30);
+  transition: transform 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  &.is-show {
+    transform: translate3d(0,0,0);
+  }
 }
 
 .spNavHeader ul {
