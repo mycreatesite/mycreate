@@ -1,9 +1,9 @@
 //!use minified at footer.php!
 /////////////////////loading scripts/////////////////////
-jQuery(function () {
+jQuery(window).on('load',function(){
   var loadingArea = jQuery('#loadingArea');
   setTimeout(function(){
-    loadingArea.addClass('loadingFade').fadeOut(700);
+    loadingArea.addClass('loadingFade').fadeOut(600);
   },1500);
 });
 /////////////////////loading scripts/////////////////////
