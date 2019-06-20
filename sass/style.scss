@@ -628,13 +628,16 @@ a {
   height: 100%;
   overflow: hidden;
   pointer-events: none;
+  div {
+	  transition: transform 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
 }
 
 %ornSet {
   position: absolute;
   display: inline-block;
   border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 1px solid rgba(255,255,255,0.2);
 }
 @mixin ornSetEach ($LR,$posX,$posY,$size) {
   #{$LR}: $posX;
