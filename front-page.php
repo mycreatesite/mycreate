@@ -27,7 +27,7 @@
     <section id="introduction" class="introduction contentsFrame">
       <div class="container">
         <h2 class="heading">introduction</h2>
-        <p id="commentAnim">初めまして。東京・神奈川を拠点とするWEBデザイナー、ma-ya’s CREATE［まーやずくりえいと］といいます。都内の制作会社でWEBデザイナーとして勤務しつつ、休日はWEBで遊ぶかお酒（ホッピー）を呷って過ごしてます。WEB制作は半分趣味。WEBから印刷系デザインまで、やれそうなことなら何でもやりたい派。シンプルでスマートな中にほんのりとポップさを感じるデザインを基本に置きつつ、要望に応じてダイナミックな表現や異なるテイストを出せるように奮闘する、気づけば30代既婚のいいオッサンです。</p>
+        <p id="commentAnim">初めまして。東京・神奈川を拠点とするWEBデザイナー、ma-ya’s CREATE［まーやずくりえいと］といいます。都内の制作会社でWEBデザイナーとして勤務しつつ、休日はWEBで遊ぶかお酒（ホッピー）を呷って過ごします。WEB制作は半分趣味。WEBから印刷系デザインまで、やれそうなことなら何でもやりたい派。シンプルでスマートな中にほんのりとポップさを感じるデザインを基本に置きつつ、ダイナミックな表現や異なるテイストを出せるように奮闘する、気づけば30代既婚のいいオッサンです。</p>
         <a class="btn" href="<?php echo home_url('/gallery');?>">gallery</a>
       </div>
     </section>
