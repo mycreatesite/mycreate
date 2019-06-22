@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/luminous-basic.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri();?>/img/favicon.ico">
-    <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri();?>/img/192_touchIcon.png" />
+    <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri();?>/img/192-touchIcon.png" />
     <?php
     if(!is_admin()){
       wp_deregister_script('jquery');
