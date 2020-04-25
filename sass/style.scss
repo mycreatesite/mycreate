@@ -111,7 +111,7 @@ a {
 .heading, .headingSearch {
   font-size: 1.9rem;
   letter-spacing: 2.7px;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
   opacity: 0;
   @extend %noUserSelect;
 }
@@ -436,7 +436,7 @@ a {
 .header {
   position: relative;
   z-index: map-get($zIndexLayer,headerLay);
-  padding: 70px 0 20px;
+  padding: 80px 0 40px;
   text-align: center;
   background-color: #fff;
 }
@@ -990,10 +990,10 @@ textarea.formArea {
 */
 
 .contentsWrap {
-  width: 80%;
+  width: 90%;
   max-width: $contMaxW;
   margin: 0 auto;
-  padding: 50px 0 150px;
+  padding: 80px 0 160px;
   text-align: center;
 }
 
@@ -1111,7 +1111,7 @@ textarea.formArea {
 */
 
 .articleArea {
-  padding: 70px 30px;
+  padding: 80px 64px;
   margin-bottom: 20px;
   text-align: left;
   border-radius: 3px;
@@ -2034,7 +2034,7 @@ html,body {
 
 .contentsWrap {
   width: 90%;
-  padding: 50px 0 100px;
+  padding: 80px 0 104px;
 }
 
 .sideLogo {
@@ -2141,7 +2141,7 @@ html,body {
 */
 
 .header {
-  padding: 50px 0 15px;
+  padding: 64px 0 32px;
 }
 
 .mycLogo {
@@ -2383,6 +2383,10 @@ html,body {
   width: 22%;
   margin: 0 auto 15px;
 }
+
+.heading, .headingSearch {
+	margin-bottom: 50px;
+  }
 
 .searchArea, .linkToAllArea {
   width: 90%;
