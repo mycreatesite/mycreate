@@ -1,0 +1,57 @@
+//break points
+$tabspWidth: 900px;
+$spWidth: 600px;
+
+//container&contentsWrap max-width
+$contMaxW: 1100px;
+
+//z-index layer
+$zIndexLayer:(
+  underLay: 5,
+  standardLay: 10,
+  upperLay: 20,
+  headerLay: 25,
+  modalLay: 30,
+  loadingLay: 40,
+);
+
+//theme fonts
+$fontBase: "Josefin Sans","Meiryo UI","メイリオ",sans-serif;
+$fontRead: "Helvetica","Segoe UI","Meiryo UI","メイリオ",sans-serif;
+$fontAwesome: "Font Awesome 5 Free";
+
+//user-select settings
+%noUserSelect {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+//theme colors-main
+$selectionBg: #b5e9e8;
+$themeColor: #4bc9c7;
+$themeFontColor: #1e1e1e;
+$articleFontColor: #353535;
+$themeBtnColorHover: rgba($themeColor,0.8);
+$blogHeadingColor: #C9C74B;
+$footerBgColor: #1e1e1e;
+
+//theme colors-gallery
+$galleryColor: #4f4f4f;
+$galleyBtnColorHover: rgba($galleryColor,0.8);
+
+//icons
+$icons: (
+  postH1: "\f00c",
+  //postH2: none,
+  postH3: "\f0eb",
+  postH4: "\f0c6",
+  postH5: "\f044",
+  postLink: "\f0c1",
+  postUl: "\f138",
+  // postOl: none,
+  postBQbefore: "\f10d",
+  postBQafter: "\f10e",
+  sideUl: "\f0da",
+);
