@@ -106,7 +106,7 @@
         <?php endwhile; ?>
         <?php wp_reset_postdata(); ?>
         <!-- ↑トップページgalleryエリアサブクエリ設定（クエリ設定方法②）↑ -->
-        <a class="btn" href="<?php echo home_url('/gallery');?>">more</a>
+        <p><a class="btn" href="<?php echo home_url('/gallery');?>">more</a></p>
       </div>
     </section>
 
