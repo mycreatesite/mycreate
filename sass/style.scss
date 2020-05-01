@@ -606,9 +606,14 @@ a {
  ////////////////introduction////////////////
 */
 
-.introduction p {
-  text-align: left;
-  line-height: 2.3;
+.introduction {
+	p {
+		text-align: left;
+		line-height: 2.3;
+	}
+	.moreArea {
+		text-align: center;
+	}
 }
 
 #commentAnim {
