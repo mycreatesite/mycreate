@@ -28,7 +28,7 @@
       <div class="container">
         <h2 class="heading">introduction</h2>
         <p id="commentAnim">初めまして。東京・神奈川を拠点とするWEBデザイナー、ma-ya’s CREATE［まーやずくりえいと］といいます。都内の制作会社でWEBデザイナーとして勤務しつつ、休日はWEBで遊ぶかお酒（ホッピー）を呷って過ごします。WEB制作は半分趣味。WEBから印刷系デザインまで、やれそうなことなら何でもやりたい派。シンプルでスマートな中にほんのりとポップさを感じるデザインを基本に置きつつ、ダイナミックな表現や異なるテイストを出せるように奮闘する、気づけば30代のいいオッサンです。</p>
-        <a class="btn" href="<?php echo home_url('/gallery');?>">gallery</a>
+        <p><a class="btn" href="<?php echo home_url('/gallery');?>">gallery</a></p>
       </div>
     </section>
 
@@ -77,7 +77,7 @@
             </div>
           </div>
         </div>
-        <a class="btn" href="/wp-content/themes/mycreate/pages/wicd/" target="_blank">features</a>
+        <p><a class="btn" href="/wp-content/themes/mycreate/pages/wicd/" target="_blank">features</a></p>
       </div>
     </section>
 
@@ -142,7 +142,7 @@
           ?>
 
         </div>
-        <a class="btn" href="<?php echo home_url('/allblogs');?>">more</a>
+        <p><a class="btn" href="<?php echo home_url('/allblogs');?>">more</a></p>
       </div>
     </section>
 
