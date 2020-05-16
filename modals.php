@@ -32,7 +32,7 @@
                     <span class="modalTypeGallery">gallery</span>
                   <?php endif; ?>
                 </p>
-                <p class="modalPostDate"><span class="modalDateDesc">posted on</span><time datetime="<?php the_time('Y-m-d');?>"><?php the_time('Y.m.d');?></time></p>
+                <p class="modalPostDate"><span class="modalDateDesc">posted on</span><time datetime="<?php the_time('c');?>"><?php the_time('Y.m.d');?></time></p>
                 <?php if (get_post_type() === 'post'): ?>
                   <h3 class="modalPostTitle modalPostIcon"><?php the_title();?></h3>
                 <?php elseif (get_post_type() === 'gallery'): ?>

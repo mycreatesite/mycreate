@@ -10,10 +10,12 @@
         ?>
           <article id="post-<?php the_ID();?>" <?php post_class('articleArea');?>>
             <h1 class="articleAreaBlogTitle"><?php the_title();?></h1>
-            <p class="postDate"><time datetime="<?php the_time('Y-m-d');?>"><?php the_time('Y.m.d');?></time></p>
-            <p class="category keycolorBg">
+			<p class="category keycolorBg">
               <?php echo get_the_term_list($post->ID, 'gallery_category'); ?>
             </p>
+			<div class='dateArea'>
+				<p class="postDate"><time datetime="<?php the_time('c');?>"><?php the_time('Y.m.d');?></time></p>
+			</div>
             <section class="articleAreaBody galleryAreaBody">
               <div class="galleryContentArea">
                 <?php the_content();?>

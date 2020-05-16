@@ -10,12 +10,21 @@
         ?>
           <article id="post-<?php the_ID();?>" <?php post_class('articleArea');?>>
             <h1 class="articleAreaBlogTitle"><?php the_title();?></h1>
-            <p class="postDate"><time datetime="<?php the_time('Y-m-d');?>"><?php the_time('Y.m.d');?></time></p>
             <p class="category keycolorBg">
               <a href="<?php $cats = get_the_category(); ?><?php $cat = $cats[0]; ?><?php echo get_category_link($cat->cat_ID); ?>">
                 <?php echo get_cat_name($cat->term_id); ?>
               </a>
             </p>
+			<div class='dateArea'>
+				<?php if (get_modifiedTime('c') == null) : ?>
+					<p class="postDate"><time datetime="<?php the_time('c') ;?>">posted : <?php the_time('Y.m.d') ;?></time></p>
+				<?php endif; ?>
+				<?php if (get_modifiedTime('c') != null) : ?>
+					<p class="postDate">posted : <?php the_time('Y.m.d') ;?></p>
+					<p class="modifiedDate"><time datetime="<?php if ($mtime = get_modifiedTime('c')) echo $mtime; ?>"><?php if ($mtime = get_modifiedTime('Y.m.d')) echo 'modified : ' , $mtime; ?></time>
+					</p>
+				<?php endif; ?>
+			</div>
             <section class="articleAreaBody">
               <?php the_content();?>
             </section>

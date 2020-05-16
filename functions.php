@@ -170,6 +170,20 @@ return $initArray;
 add_filter( 'tiny_mce_before_init', 'custom_editor_settings' );
 //投稿画面「見出し１」等削除
 
+//投稿最終更新日表示
+function get_modifiedTime($format) {
+    $modifiedTime = get_the_modified_time('Ymd');
+    $postedTime = get_the_time('Ymd');
+    if ($postedTime > $modifiedTime) {
+        return get_the_time($format);
+    } elseif ($postedTime === $modifiedTime) {
+        return null;
+    } else {
+        return get_the_modified_time($format);
+    }
+}
+//投稿最終更新日表示
+
 //////////////////////////ショートコード//////////////////////////
 //ma-ya’s CREATE
 function shortcode_myc(){
