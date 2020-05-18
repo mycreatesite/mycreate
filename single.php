@@ -21,7 +21,7 @@
 				<?php endif; ?>
 				<?php if (get_modifiedTime('c') != null) : ?>
 					<p class="postDate">posted : <?php the_time('Y.m.d') ;?></p>
-					<p class="modifiedDate"><time datetime="<?php if ($mtime = get_modifiedTime('c')) echo $mtime; ?>"><?php if ($mtime = get_modifiedTime('Y.m.d')) echo 'update : ' , $mtime; ?></time>
+					<p class="modifiedDate"><time datetime="<?php if ($mtime = get_modifiedTime('c')) echo $mtime; ?>"><?php if ($mtime = get_modifiedTime('Y.m.d')) echo 'updated : ' , $mtime; ?></time>
 					</p>
 				<?php endif; ?>
 			</div>
