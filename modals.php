@@ -20,7 +20,7 @@
                 <?php if (has_post_thumbnail()) : ?>
                   <?php the_post_thumbnail('thumbnail');?>
                 <?php else : ?>
-                  <img src="<?php echo get_template_directory_uri();?>/img/noimage.svg">
+                  <img src="<?php echo get_template_directory_uri();?>/common/img/noimage.svg">
                 <?php endif; ?>
               </div>
             <a href="<?php the_permalink();?>">

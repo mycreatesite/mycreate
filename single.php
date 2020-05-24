@@ -53,5 +53,4 @@
       
     </div>
 
-    <?php get_template_part('modals');?>
     <?php get_footer();?>

@@ -7,15 +7,15 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#1e1e1e">
     <title><?php if(!is_home()){wp_title(' - ',true,'right');}?><?php bloginfo('name');?></title>
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/reset.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/common/css/reset.css">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" media="all" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/juicyslider.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/luminous-basic.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
-    <link rel="shortcut icon" href="<?php echo get_template_directory_uri();?>/img/favicon.ico">
-    <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri();?>/img/192-touchIcon.png" />
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/common/css/juicyslider.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/common/css/luminous-basic.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/common/css/style.css">
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri();?>/common/img/favicon.ico">
+    <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri();?>/common/img/192-touchIcon.png" />
     <?php
     if(!is_admin()){
       wp_deregister_script('jquery');
@@ -188,7 +188,7 @@
       <nav id="navHeader" class="navHeader">
         <ul>
           <li class="logoFollow">
-            <a href="<?php echo home_url();?>"><img src="<?php echo get_template_directory_uri(); ?>/img/myc_logo_blk.svg" alt="ma-ya's CREATE [まーやずくりえいと]"></a>
+            <a href="<?php echo home_url();?>"><img src="<?php echo get_template_directory_uri(); ?>/common/img/myc_logo_blk.svg" alt="ma-ya's CREATE [まーやずくりえいと]"></a>
           </li>
           <li><a class="modalOpen">what's new?</a></li>
           <li><a href="<?php if ( is_home() || is_front_page() ) : ?>#introduction<?php else : ?><?php echo home_url('?id=introduction');?><?php endif; ?>">introduction</a></li>
@@ -201,7 +201,7 @@
       <nav id="spNavHeader" class="spNavHeader">
         <ul>
           <li class="logoSpNav">
-            <a href="<?php echo home_url();?>"><img src="<?php echo get_template_directory_uri(); ?>/img/myc_logo_w.svg" alt="ma-ya's CREATE [まーやずくりえいと]"></a>
+            <a href="<?php echo home_url();?>"><img src="<?php echo get_template_directory_uri(); ?>/common/img/myc_logo_w.svg" alt="ma-ya's CREATE [まーやずくりえいと]"></a>
           </li>
           <li><a class="modalOpen">what's new?</a></li>
           <li><a href="<?php if ( is_home() || is_front_page() ) : ?>#introduction<?php else : ?><?php echo home_url('?id=introduction');?><?php endif; ?>">introduction</a></li>

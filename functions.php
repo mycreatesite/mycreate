@@ -14,15 +14,13 @@ function loadMyJsScripts() {
     wp_enqueue_script('jquery','//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js');
     wp_enqueue_script('jquery-ui-core','//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js', array('jquery'));
   }
-  wp_enqueue_script('myplugins.js', get_template_directory_uri() . '/js/myplugins.js');
-  wp_enqueue_script('lodash.min.js','//cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js');
   if ( is_home() || is_front_page() ){
-    wp_enqueue_script('myplugins_front.js', get_template_directory_uri() . '/js/myplugins_front.js');
+    wp_enqueue_script('myplugins_front.js', get_template_directory_uri() . '/common/js/myplugins_front.js');
   }
   if ( is_singular('gallery') ){
-    wp_enqueue_script('myplugins_gallery.js', get_template_directory_uri() . '/js/myplugins_gallery.js');
+    wp_enqueue_script('myplugins_gallery.js', get_template_directory_uri() . '/common/js/myplugins_gallery.js');
   }
-  wp_enqueue_script('myscript.js', get_template_directory_uri() . '/js/myscript.js');
+  wp_enqueue_script('common.js', get_template_directory_uri() . '/common/js/common.js');
 }
 add_action('wp_footer', 'loadMyJsScripts');
 //script読み分け
@@ -42,13 +40,13 @@ add_filter( 'script_loader_src', 'remove_wp_ver_info', 9999 );
 add_action('admin_print_styles','print_admin_stylesheet');
 add_action('login_head','print_admin_stylesheet');
 function print_admin_stylesheet(){
-	echo '<link href="'.get_template_directory_uri().'/css/my-admin.css" type="text/css" rel="stylesheet" media="all"/>'.PHP_EOL;
+	echo '<link href="'.get_template_directory_uri().'/common/css/my-admin.css" type="text/css" rel="stylesheet" media="all"/>'.PHP_EOL;
 }
 //管理画面・ログイン画面CSS適用
 
 //ログイン・管理画面favicon
 function adminLogin_add_favicon() {
-  $url = get_template_directory_uri() . '/img/favicon.ico';
+  $url = get_template_directory_uri() . '/common/img/favicon.ico';
   echo '<link rel="shortcut icon" href="' . $url . '" />';
 }
 add_action('login_head', 'adminLogin_add_favicon');
@@ -70,7 +68,7 @@ add_filter( 'login_headertitle', 'custom_login_logo_title' );
 function custom_login_bg() { ?>
   <style>
     .login {
-      background: url(<?php echo get_template_directory_uri(); ?>/img/loginbg.jpg) no-repeat center center;
+      background: url(<?php echo get_template_directory_uri(); ?>/common/img/loginbg.jpg) no-repeat center center;
       background-size: cover;
     }
   </style>
@@ -197,7 +195,7 @@ function include_php($params = array()) {
     'file' => 'default'
   ), $params));
   ob_start();
-  include(get_stylesheet_directory() . "/php_tpl/$file.php");
+  include(get_stylesheet_directory() . "/php_module_templates/$file.php");
   return ob_get_clean();
 } 
 add_shortcode('phpinc','include_php');

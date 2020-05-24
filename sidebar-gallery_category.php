@@ -1,6 +1,6 @@
 <aside class="sideBar type-gallery">
   <div class="sideLogo">
-    <img src="<?php echo get_template_directory_uri(); ?>/img/sideLogo.svg">
+    <img src="<?php echo get_template_directory_uri(); ?>/common/img/sideLogo.svg">
   </div>
   <div class="linkToAllArea">
     <a class="btn btnToList" href="<?php echo home_url('/gallery');?>">all works</a>

@@ -4,9 +4,9 @@
     <section class="mainVisual">
       <div id="myslider" class="juicyslider">
       	<ul>
-      		<li><img src="<?php echo get_template_directory_uri(); ?>/img/slide1.jpg" alt="slide1"></li>
-      		<li><img src="<?php echo get_template_directory_uri(); ?>/img/slide2.jpg" alt="slide2"></li>
-      		<li><img src="<?php echo get_template_directory_uri(); ?>/img/slide3.jpg" alt="slide3"></li>
+      		<li><img src="<?php echo get_template_directory_uri(); ?>/common/img/slide1.jpg" alt="slide1"></li>
+      		<li><img src="<?php echo get_template_directory_uri(); ?>/common/img/slide2.jpg" alt="slide2"></li>
+      		<li><img src="<?php echo get_template_directory_uri(); ?>/common/img/slide3.jpg" alt="slide3"></li>
       	</ul>
       	<div class="nav next"><i class="fas fa-chevron-right"></i></div>
       	<div class="nav prev"><i class="fas fa-chevron-left"></i></div>
@@ -38,7 +38,7 @@
         <div class="skillsLayout">
           <div class="skill forShow1 clearfix">
             <div class="skillName">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/coding.svg" alt="コーディング">
+              <img src="<?php echo get_template_directory_uri(); ?>/common/img/coding.svg" alt="コーディング">
               <h3>コーディング</h3>
               <p class="keycolorTx italic">coding</p>
             </div>
@@ -48,7 +48,7 @@
           </div>
           <div class="skill forShow1 clearfix">
             <div class="skillName">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/wp.svg" alt="CMSサイト構築">
+              <img src="<?php echo get_template_directory_uri(); ?>/common/img/wp.svg" alt="CMSサイト構築">
               <h3>CMSサイト</h3>
               <p class="keycolorTx italic">cms website</p>
             </div>
@@ -58,7 +58,7 @@
           </div>
           <div class="skill forShow1 clearfix">
             <div class="skillName">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/print.svg" alt="印刷物">
+              <img src="<?php echo get_template_directory_uri(); ?>/common/img/print.svg" alt="印刷物">
               <h3>印刷物</h3>
               <p class="keycolorTx italic">printed matter</p>
             </div>
@@ -68,7 +68,7 @@
           </div>
           <div class="skill forShow1 clearfix">
             <div class="skillName">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/graph.svg" alt="コーディング">
+              <img src="<?php echo get_template_directory_uri(); ?>/common/img/graph.svg" alt="コーディング">
               <h3>WEB画像</h3>
               <p class="keycolorTx italic">web banner</p>
             </div>
@@ -99,7 +99,7 @@
               <?php if (has_post_thumbnail()) : ?>
                 <?php the_post_thumbnail('thumbnail');?>
               <?php else : ?>
-                <img src="<?php echo get_template_directory_uri();?>/img/noimage.svg">
+                <img src="<?php echo get_template_directory_uri();?>/common/img/noimage.svg">
               <?php endif; ?>
             </a>
           </div>
@@ -126,7 +126,7 @@
                   <?php if (has_post_thumbnail()) : ?>
                     <?php the_post_thumbnail('thumbnail');?>
                   <?php else : ?>
-                    <img src="<?php echo get_template_directory_uri();?>/img/noimage.svg">
+                    <img src="<?php echo get_template_directory_uri();?>/common/img/noimage.svg">
                   <?php endif; ?>
                 </div>
                 <div class="blogText">
@@ -147,10 +147,10 @@
     </section>
 
     <section id="contact" class="contact">
-      <video class="contactVideo" autoplay loop muted poster="<?php echo get_template_directory_uri();?>/img/contact_bg.jpg">
-        <source src="<?php echo get_template_directory_uri();?>/img/contact_bg.webm" type="video/webm">
-        <source src="<?php echo get_template_directory_uri();?>/img/contact_bg.mp4" type="video/mp4">
-        <img src="<?php echo get_template_directory_uri();?>/img/contact_bg.jpg" alt="contact">
+      <video class="contactVideo" autoplay loop muted poster="<?php echo get_template_directory_uri();?>/common/img/contact_bg.jpg">
+        <source src="<?php echo get_template_directory_uri();?>/common/img/contact_bg.webm" type="video/webm">
+        <source src="<?php echo get_template_directory_uri();?>/common/img/contact_bg.mp4" type="video/mp4">
+        <img src="<?php echo get_template_directory_uri();?>/common/img/contact_bg.jpg" alt="contact">
       </video>
       <div class="container">
         <h2 class="heading">contact</h2>
@@ -161,5 +161,4 @@
     </section>
 
 
-    <?php get_template_part('modals');?>
     <?php get_footer();?>

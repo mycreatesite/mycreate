@@ -1,6 +1,6 @@
 <aside class="sideBar">
   <div class="sideLogo">
-    <img src="<?php echo get_template_directory_uri(); ?>/img/sideLogo.svg">
+    <img src="<?php echo get_template_directory_uri(); ?>/common/img/sideLogo.svg">
   </div>
   <div class="searchArea">
     <form class="searchForm" action="<?php echo home_url('/');?>" method="get">
