@@ -1,10 +1,19 @@
 const path = require('path');
+const glob = require("glob");
+const entries = {};
+const entryDir = path.join(__dirname, 'work/js/common');
+
+glob.sync("**/*.js", {
+	cwd: entryDir
+}).map(key => {
+	entries[key] = path.resolve(entryDir, key)
+});
 
 module.exports = {
-	entry: './work/js/common/common.js',
+	entry: entries,
 	output: {
-		path: path.resolve(__dirname, './common/js'),
-		filename: 'common.js'
+		path: path.join(__dirname, "common/js"),
+		filename: "[name]",
 	},
 	module: {
 		rules: [

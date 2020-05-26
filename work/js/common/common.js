@@ -1,6 +1,29 @@
 import '../module/common.plugin';
 import throttle from 'lodash/throttle';
 
+////////////global variable////////////
+export const accessFlag = sessionStorage.getItem('accessed');
+const body = $('body');
+
+////////////Draw SVG////////////
+(function () {
+	var mycLogo = $("#mycLogo").drawsvg({
+		duration: 1000,
+		stagger: 80,
+		easing: "swing",
+		callback: function () {
+			$("#mycLogo g").addClass("fillAnim");
+		}
+	});
+	if (!accessFlag && body.hasClass('home')) {
+		setTimeout(function () {
+			mycLogo.css("opacity", 1).drawsvg("animate");
+		}, 1800);
+	} else {
+		mycLogo.css("opacity", 1).drawsvg("animate");
+	}
+})();
+
 ////////////scrollEvents_start////////////
 $(function () {
 

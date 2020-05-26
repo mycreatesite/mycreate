@@ -24,8 +24,8 @@
     ?>
     <?php wp_head();?>
   </head>
-  <body>
-  
+
+  <body <?php if (is_home() || is_front_page()):?> class="home"<?php endif;?> >
 
     <!--loadingArea-->
     <?php if (is_home() || is_front_page()):?>
