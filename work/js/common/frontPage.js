@@ -1,9 +1,11 @@
+////////////imports////////////
+
 import Rellax from '../module/rellax.min';
-import { accessFlag } from './common';
 
 /////////////////////loading scripts/////////////////////
 (function () {
-	var loadingArea = $('#loadingArea');
+	const accessFlag = sessionStorage.getItem('accessed');
+	const loadingArea = $('#loadingArea');
 	if (accessFlag) {
 		loadingPageRemove();
 	} else {

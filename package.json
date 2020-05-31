@@ -8,7 +8,7 @@
 		"sass-w": "gulp sass:watch",
 		"wp-dev": "webpack --watch --config webpack.config.development.js",
 		"wp-prod": "webpack --config webpack.config.production.js",
-		"stream": "run-p sass wp-dev",
+		"stream": "run-p sass-w wp-dev",
 		"build": "run-p wp-prod sass"
 	},
 	"keywords": [],

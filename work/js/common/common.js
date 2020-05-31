@@ -1,12 +1,15 @@
+////////////imports////////////
+
 import '../module/common.plugin';
 import throttle from 'lodash/throttle';
 
 ////////////global variable////////////
-export const accessFlag = sessionStorage.getItem('accessed');
+
 const body = $('body');
 
 ////////////Draw SVG////////////
 (function () {
+	const accessFlag = sessionStorage.getItem('accessed');
 	var mycLogo = $("#mycLogo").drawsvg({
 		duration: 1000,
 		stagger: 80,
@@ -138,7 +141,7 @@ $(function () {
 	var spNavLink = $('#spNavHeader li a');
 	var delayTime = 80;
 	var fadeTime = 200;
-	hambBtns.click(function () {
+	hambBtns.on('click', function () {
 		toggleNav();
 		if (spNavLists.css('display') == 'list-item') {
 			spNavLists.fadeOut(fadeTime);
@@ -148,18 +151,19 @@ $(function () {
 			});
 		}
 	});
-	spNavLink.click(function () {
+	spNavLink.on('click', function () {
 		toggleNav();
 		spNavLists.hide();
 	});
 	function toggleNav() {
 		if (!spNav.hasClass('is-show')) {
-			spNav.fadeToggle(fadeTime).toggleClass('is-show');
+			spNav.fadeIn(fadeTime).addClass('is-show');
 		} else {
-			spNav.fadeToggle(fadeTime, function () {
-				$(this).toggleClass('is-show');
+			spNav.fadeOut(fadeTime, function () {
+				$(this).removeClass('is-show');
 			});
 		}
+
 		hambBtn1.toggleClass('hambMove1');
 		hambBtn2.toggleClass('hambMove2');
 		hambBtn3.toggleClass('hambMove3');
@@ -223,14 +227,14 @@ $(window).on('load', function () {
 
 ////////////modal////////////
 $(function () {
-	$('.modalOpen').click(function () {
+	$('.modalOpen').on('click', function () {
 		if ($(this).parents('#spNavHeader')[0]) {
 			$('#modalArea').show();
 		} else {
 			$('#modalArea').fadeIn();
 		}
 	});
-	$('#modalClose,#modalOuter').click(function () {
+	$('#modalClose,#modalOuter').on('click', function () {
 		$('#modalArea').fadeOut();
 	});
 });

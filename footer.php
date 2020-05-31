@@ -32,11 +32,5 @@
 <?php wp_footer();?>
 
 
-<!--front-plugin-setting.js_minified-->
-<?php if (is_home() || is_front_page()):?>
-<script src="<?php echo get_template_directory_uri(); ?>/common/js/frontPage.js"></script>
-<?php endif;?>
-
-
 </body>
 </html>
