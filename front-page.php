@@ -1,7 +1,7 @@
 
     <?php get_header();?>
 
-    <section class="mainVisual">
+    <section class="mainVisual contentsFrame">
       <div id="myslider" class="juicyslider">
       	<ul>
       		<li><img src="<?php echo get_template_directory_uri(); ?>/common/img/slide1.jpg" alt="slide1"></li>
@@ -147,17 +147,19 @@
     </section>
 
     <section id="contact" class="contact">
-      <video class="contactVideo" autoplay loop muted poster="<?php echo get_template_directory_uri();?>/common/img/contact_bg.jpg">
-        <source src="<?php echo get_template_directory_uri();?>/common/img/contact_bg.webm" type="video/webm">
-        <source src="<?php echo get_template_directory_uri();?>/common/img/contact_bg.mp4" type="video/mp4">
-        <img src="<?php echo get_template_directory_uri();?>/common/img/contact_bg.jpg" alt="contact">
-      </video>
-      <div class="container">
-        <h2 class="heading">contact</h2>
-        <div class="contactForm forShow4">
-          <?php echo do_shortcode('[contact-form-7 id="25" title="myCREATE_contact"]'); ?>
-        </div>
-      </div>
+		<div class="contactInner">
+			<video class="contactVideo" autoplay loop muted poster="<?php echo get_template_directory_uri();?>/common/img/contact_bg.jpg">
+				<source src="<?php echo get_template_directory_uri();?>/common/img/contact_bg.webm" type="video/webm">
+				<source src="<?php echo get_template_directory_uri();?>/common/img/contact_bg.mp4" type="video/mp4">
+				<img src="<?php echo get_template_directory_uri();?>/common/img/contact_bg.jpg" alt="contact">
+			</video>
+			<div class="container">
+				<h2 class="heading">contact</h2>
+				<div class="contactForm forShow4">
+				<?php echo do_shortcode('[contact-form-7 id="25" title="myCREATE_contact"]'); ?>
+				</div>
+			</div>
+		</div>
     </section>
 
 

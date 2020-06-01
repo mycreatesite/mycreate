@@ -12,7 +12,6 @@ export default function bodyScrollPrevent(flag) {
 			body.style.width = '100%';
 			body.style.top = scrollPosition + 'px';
 		} else {
-			console.log('not ios');
 			body.style.overflow = 'hidden';
 		}
 	} else if (!flag) {

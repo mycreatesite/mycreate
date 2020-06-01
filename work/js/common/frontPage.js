@@ -2,9 +2,12 @@
 
 import Rellax from '../module/rellax.min';
 
+////////////global variable////////////
+
+const accessFlag = sessionStorage.getItem('accessed');
+
 /////////////////////loading scripts/////////////////////
 (function () {
-	const accessFlag = sessionStorage.getItem('accessed');
 	const loadingArea = $('#loadingArea');
 	if (accessFlag) {
 		loadingPageRemove();

@@ -1,15 +1,14 @@
-////////////imports////////////
-
 import '../module/common.plugin';
 import throttle from 'lodash/throttle';
+import bodyScrollPrevent from '../module/bodyScrollPrevent';
 
 ////////////global variable////////////
 
 const body = $('body');
+const accessFlag = sessionStorage.getItem('accessed');
 
 ////////////Draw SVG////////////
 (function () {
-	const accessFlag = sessionStorage.getItem('accessed');
 	var mycLogo = $("#mycLogo").drawsvg({
 		duration: 1000,
 		stagger: 80,
@@ -145,13 +144,16 @@ $(function () {
 		toggleNav();
 		if (spNavLists.css('display') == 'list-item') {
 			spNavLists.fadeOut(fadeTime);
+			bodyScrollPrevent(false);
 		} else {
+			bodyScrollPrevent(true);
 			spNavLists.each(function (i) {
 				$(this).delay(i * delayTime).fadeIn(fadeTime);
 			});
 		}
 	});
 	spNavLink.on('click', function () {
+		bodyScrollPrevent(false);
 		toggleNav();
 		spNavLists.hide();
 	});
@@ -228,14 +230,23 @@ $(window).on('load', function () {
 ////////////modal////////////
 $(function () {
 	$('.modalOpen').on('click', function () {
+		bodyScrollPrevent(true);
 		if ($(this).parents('#spNavHeader')[0]) {
 			$('#modalArea').show();
 		} else {
 			$('#modalArea').fadeIn();
 		}
+		if ($('#contact')) {
+			$('#contact').toggleClass('is-passive');
+		}
 	});
 	$('#modalClose,#modalOuter').on('click', function () {
-		$('#modalArea').fadeOut();
+		$('#modalArea').fadeOut(function () {
+			bodyScrollPrevent(false);
+			if ($('#contact')) {
+				$('#contact').toggleClass('is-passive');
+			}
+		});
 	});
 });
 ////////////modal////////////
