@@ -15,7 +15,7 @@ window.onload = function(){
   //関数変数
   var counter;
   var mogiRotate;
-  //時間設定取得
+  //設定取得
   var timerMin = 0;
   var timerSec = 0;
   var timer = 0;

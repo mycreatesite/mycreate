@@ -26,6 +26,16 @@ function loadMyJsScripts() {
 add_action('wp_footer', 'loadMyJsScripts');
 //script読み分け
 
+//reCaptchaパフォーマンス対応
+add_action('wp_print_scripts', function () {
+    wp_dequeue_script('google-recaptcha');
+});
+function cf7_defer_recaptcha() {
+    wp_enqueue_script('cf7recap', get_template_directory_uri() . '/common/js/recaptcha.js', array('jquery'), '1.0');
+}
+add_action('get_footer', 'cf7_defer_recaptcha');
+//reCaptchaパフォーマンス対応
+
 //ver～削除
 function remove_wp_ver_info( $src ) {
   if (strpos( $src, 'ver=' )){

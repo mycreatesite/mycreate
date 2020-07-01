@@ -10,7 +10,9 @@ module.exports = merge(common, {
 			new TerserPlugin({
 				terserOptions: {
 					ecma: 6,
-					compress: true,
+					compress: {
+						drop_console: true
+					},
 					output: {
 						comments: false,
 						beautify: false
