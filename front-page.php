@@ -85,7 +85,7 @@
       <div class="container">
         <h2 class="heading">gallery</h2>
         <?php
-          $pickup = array(
+          $pickupGallery = array(
             'post_type' => 'gallery',
             'posts_per_page' => 2,
             'meta_query' => array(
@@ -95,9 +95,9 @@
               )
             )
           );
-          $pickup_query = new WP_Query($pickup);
+          $pickupGallery_query = new WP_Query($pickupGallery);
         ?>
-        <?php while ( $pickup_query->have_posts() ) : $pickup_query->the_post(); ?>
+        <?php while ( $pickupGallery_query->have_posts() ) : $pickupGallery_query->the_post(); ?>
           <?php $galleryClasses = array('galleryItem','forShow2');?>
           <div id="post-<?php the_ID();?>" <?php post_class($galleryClasses);?>>
             <a href="<?php the_permalink();?>">
