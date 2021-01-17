@@ -84,15 +84,20 @@
     <section id="gallery" class="gallery contentsFrame">
       <div class="container">
         <h2 class="heading">gallery</h2>
-        <!-- ↓トップページgalleryエリアサブクエリ設定（クエリ設定方法②）↓ -->
         <?php
-        $args = array(
-          'post_type' => 'gallery',
-          'posts_per_page' => 2,
-        );
+          $pickup = array(
+            'post_type' => 'gallery',
+            'posts_per_page' => 2,
+            'meta_query' => array(
+              array(
+                'key'=>'pickup',
+                'value'=>'1',
+              )
+            )
+          );
+          $pickup_query = new WP_Query($pickup);
         ?>
-        <?php $front_gallery_query = new WP_Query( $args ); ?>
-        <?php while ( $front_gallery_query->have_posts() ) : $front_gallery_query->the_post(); ?>
+        <?php while ( $pickup_query->have_posts() ) : $pickup_query->the_post(); ?>
           <?php $galleryClasses = array('galleryItem','forShow2');?>
           <div id="post-<?php the_ID();?>" <?php post_class($galleryClasses);?>>
             <a href="<?php the_permalink();?>">
@@ -105,7 +110,6 @@
           </div>
         <?php endwhile; ?>
         <?php wp_reset_postdata(); ?>
-        <!-- ↑トップページgalleryエリアサブクエリ設定（クエリ設定方法②）↑ -->
         <p class="moreArea"><a class="btn" href="<?php echo home_url('/gallery');?>">more</a></p>
       </div>
     </section>

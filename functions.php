@@ -87,7 +87,7 @@ function custom_login_bg() { ?>
 add_action( 'login_enqueue_scripts', 'custom_login_bg' );
 //ログイン画面背景
 
-//トップページblogエリアメインクエリ変更（クエリ設定方法①）
+//トップページblogエリアメインクエリ変更
 add_action( 'pre_get_posts', 'my_pre_get_posts' );
 function my_pre_get_posts( $query ) {
 	if ( is_admin() || !$query->is_main_query() ) {
@@ -98,7 +98,7 @@ function my_pre_get_posts( $query ) {
     return;
 	}
 }
-//トップページblogエリアメインクエリ変更（クエリ設定方法①）
+//トップページblogエリアメインクエリ変更
 
 //アイキャッチ機能
 add_theme_support('post-thumbnails');
