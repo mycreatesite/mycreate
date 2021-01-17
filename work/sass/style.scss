@@ -712,6 +712,27 @@ a {
   + .galleryItem {
     margin-left:3%;
   }
+  > a {
+    &::after {
+      content: 'PICKUP';
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      padding: .5rem 1rem;
+      background-color: #fff;
+      border-radius: 0 3px 0 0;
+      font-size: .75rem;
+      font-weight: bold;
+      transform: rotate(90deg) translateY(-100%);
+      transform-origin: left top;
+      transition: color .3s;
+    }
+    &:hover {
+      &::after {
+        color: $themeColor;
+      }
+    }
+  }
   img {
     display: block;
     width:100%;
