@@ -20,8 +20,8 @@
 <!--mogiFooter-->
 <?php if (is_home() || is_front_page()):?>
 <div id="mogiFooter">
-  <a href="/?s=もぎたん">
-    <img class="mogiFooterImg" src="<?php echo get_template_directory_uri(); ?>/common/img/mogi_footer.svg" alt="HELLO! from mogitan.">
+  <a href="https://tamtam-1p-diary.netlify.app/" target="_blank" rel=”noopener noreferrer”>
+    <img class="mogiFooterImg" src="<?php echo get_template_directory_uri(); ?>/common/img/tamtam_footer.svg" alt="たむたむのひとこと日記">
   </a>
 </div>
 <?php endif; ?>
