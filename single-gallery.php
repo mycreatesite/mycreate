@@ -14,7 +14,7 @@
 				<?php echo get_the_term_list($post->ID, 'gallery_category'); ?>
 				</p>
 				<div class='dateArea'>
-					<p class="postDate"><time datetime="<?php the_time('c');?>"><?php the_time('Y.m.d');?></time></p>
+					<!-- <p class="postDate"><time datetime="</*?php the_time('c');?/*>"></*?php the_time('Y.m.d');?/*></time></p> -->
 				</div>
 				<section class="articleAreaBody galleryAreaBody">
 				<div class="galleryContentArea">
