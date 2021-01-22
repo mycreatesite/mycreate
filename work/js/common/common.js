@@ -8,17 +8,17 @@ const body = $('body');
 const accessFlag = sessionStorage.getItem('accessed');
 
 ////////////Draw SVG////////////
-(function () {
-	var mycLogo = $("#mycLogo").drawsvg({
+(() => {
+	const mycLogo = $("#mycLogo").drawsvg({
 		duration: 1000,
 		stagger: 80,
 		easing: "swing",
-		callback: function () {
+		callback() {
 			$("#mycLogo g").addClass("fillAnim");
 		}
 	});
 	if (!accessFlag && body.hasClass('home')) {
-		setTimeout(function () {
+		setTimeout(() => {
 			mycLogo.css("opacity", 1).drawsvg("animate");
 		}, 1800);
 	} else {
@@ -27,34 +27,34 @@ const accessFlag = sessionStorage.getItem('accessed');
 })();
 
 ////////////scrollEvents_start////////////
-$(function () {
+$(() => {
 
 	//navHeaderShow_variables
-	var cloneNav = $('#navHeader').clone().attr('id', 'cloneNav').addClass('cloneNav').insertAfter('#navHeader');
-	var logoMove = $('.logoFollow:last');
-	var showClass = 'isShow';
+	const cloneNav = $('#navHeader').clone().attr('id', 'cloneNav').addClass('cloneNav').insertAfter('#navHeader');
+	const logoMove = $('.logoFollow:last');
+	const showClass = 'isShow';
 	//showUp_variables
-	var forShow1 = $('.forShow1');
-	var forShow2 = $('.forShow2');
-	var forShow3 = $('.forShow3');
-	var forShow4 = $('.forShow4');
-	var forShows = [forShow1, forShow2, forShow3, forShow4];
+	const forShow1 = $('.forShow1');
+	const forShow2 = $('.forShow2');
+	const forShow3 = $('.forShow3');
+	const forShow4 = $('.forShow4');
+	const forShows = [forShow1, forShow2, forShow3, forShow4];
 	//textillate_variables
-	var heading = $('.heading');
+	const heading = $('.heading');
 	//commentAnim_variables
-	var commentAnim = $('#commentAnim');
+	const commentAnim = $('#commentAnim');
 	//rollBack_variables
-	var rollBack = $('#rollBack');
+	const rollBack = $('#rollBack');
 	//helloMogi_variables
-	var mogiFooter = $('#mogiFooter');
-	var contentsHeight = $(document).height();
+	const mogiFooter = $('#mogiFooter');
+	const contentsHeight = $(document).height();
 
 	////scrollEvents////
 	$(window).on('scroll', throttle(function () {
 
 		//common_variables
-		var windowHeight = $(this).height();
-		var scroll = $(this).scrollTop();
+		const windowHeight = $(this).height();
+		const scroll = $(this).scrollTop();
 
 		//navHeaderShow_func
 		if (scroll > 700) {
@@ -64,11 +64,11 @@ $(function () {
 			cloneNav.removeClass(showClass);
 		}
 		//showUp_func
-		var len = forShows.length;
-		for (var j = 0; j < len; j++) {
+		const len = forShows.length;
+		for (let j = 0; j < len; j++) {
 			forShows[j].each(function (i) {
-				var forShowPoint = $(this).offset().top - 30;
-				var delayTime = 90;
+				const forShowPoint = $(this).offset().top - 30;
+				const delayTime = 90;
 				if (scroll > forShowPoint - windowHeight) {
 					$(this).delay(i * delayTime).queue(function () {
 						$(this).addClass('showUp');
@@ -78,7 +78,7 @@ $(function () {
 		}
 		//textillate_func
 		heading.each(function () {
-			var headingPoint = $(this).offset().top;
+			const headingPoint = $(this).offset().top;
 			if (scroll > headingPoint - windowHeight) {
 				$(this).css('opacity', 1).textillate({
 					in: {
@@ -92,7 +92,7 @@ $(function () {
 		});
 		//commentAnim_func
 		if (commentAnim.length) {
-			var myCommentPoint = commentAnim.offset().top;
+			const myCommentPoint = commentAnim.offset().top;
 			if (scroll > myCommentPoint - windowHeight) {
 				commentAnim.css('opacity', 1).addClass('animated zoomInDown');
 			}
@@ -121,7 +121,7 @@ $(function () {
 
 	////optional_func////
 	//rollBackClicked
-	rollBack.click(function () {
+	rollBack.on('click',() => {
 		$('body,html').animate({ scrollTop: 0 }, 700, 'easeInOutQuart');
 	});
 	////optional_func////
@@ -130,17 +130,17 @@ $(function () {
 ////////////scrollEvents_end////////////
 
 ////////////spNavHeader////////////
-$(function () {
-	var hambBtns = $('#hambBtn');
-	var hambBtn1 = $('.hambBtn1');
-	var hambBtn2 = $('.hambBtn2');
-	var hambBtn3 = $('.hambBtn3');
-	var spNav = $('#spNavHeader');
-	var spNavLists = $('.spNavHeader ul li');
-	var spNavLink = $('#spNavHeader li a');
-	var delayTime = 80;
-	var fadeTime = 200;
-	hambBtns.on('click', function () {
+$(() => {
+	const hambBtns = $('#hambBtn');
+	const hambBtn1 = $('.hambBtn1');
+	const hambBtn2 = $('.hambBtn2');
+	const hambBtn3 = $('.hambBtn3');
+	const spNav = $('#spNavHeader');
+	const spNavLists = $('.spNavHeader ul li');
+	const spNavLink = $('#spNavHeader li a');
+	const delayTime = 80;
+	const fadeTime = 200;
+	hambBtns.on('click', () => {
 		toggleNav();
 		if (spNavLists.css('display') == 'list-item') {
 			spNavLists.fadeOut(fadeTime);
@@ -152,7 +152,7 @@ $(function () {
 			});
 		}
 	});
-	spNavLink.on('click', function () {
+	spNavLink.on('click', () => {
 		bodyScrollPrevent(false);
 		toggleNav();
 		spNavLists.hide();
@@ -174,11 +174,11 @@ $(function () {
 ////////////spNavHeader////////////
 //↑can not replace↓//
 ////////////smoothScroll////////////
-$(function () {
-	$('.navHeader a[href^="#"]').click(function () {
-		var href = $(this).attr('href');
-		var target = $(href == '#' || href === '' ? 'html' : href);
-		var position = target.offset().top;
+$(() => {
+	$('.navHeader a[href^="#"]').on('click',function () {
+		const href = $(this).attr('href');
+		const target = $(href == '#' || href === '' ? 'html' : href);
+		const position = target.offset().top;
 		if (href === '#contact') {
 			$('html,body').animate({ scrollTop: position }, 700, 'easeInOutQuart');
 		} else {
@@ -186,10 +186,10 @@ $(function () {
 		}
 		return false;
 	});
-	$('#spNavHeader a[href^="#"]').click(function () {
-		var href = $(this).attr('href');
-		var target = $(href == '#' || href === '' ? 'html' : href);
-		var position = target.offset().top;
+	$('#spNavHeader a[href^="#"]').on('click',function () {
+		const href = $(this).attr('href');
+		const target = $(href == '#' || href === '' ? 'html' : href);
+		const position = target.offset().top;
 		if (href === '#contact') {
 			$('html,body').animate({ scrollTop: position + 100 }, 700, 'easeInOutQuart');
 		} else {
@@ -201,15 +201,15 @@ $(function () {
 ////////////smoothScroll////////////
 
 ////////////otherpage to frontpage////////////
-$(window).on('load', function () {
-	var fixPx = -50;
-	var url = $(location).attr('href');
-	if (url.indexOf("?id=") != -1) {
-		var idName = url.split("?id=");
-		var target = $('#' + idName[idName.length - 1]);
+$(window).on('load', () => {
+	const fixPx = -50;
+	const url = $(location).attr('href');
+	if (url.includes("?id=")) {
+		const idName = url.split("?id=");
+		const target = $(`#${idName[idName.length - 1]}`);
 		if (target.length) {
-			var pos = target.offset().top + fixPx;
-			if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
+			const pos = target.offset().top + fixPx;
+			if ((navigator.userAgent.indexOf('iPhone') > 0 && !navigator.userAgent.includes('iPad')) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
 				if (target.prop('id') == "contact") {
 					$("html, body").scrollTop(pos + 150);
 				} else {
@@ -228,7 +228,7 @@ $(window).on('load', function () {
 ////////////otherpage to frontpage////////////
 
 ////////////modal////////////
-$(function () {
+$(() => {
 	$('.modalOpen').on('click', function () {
 		bodyScrollPrevent(true);
 		if ($(this).parents('#spNavHeader')[0]) {
@@ -240,8 +240,8 @@ $(function () {
 			$('#contact').toggleClass('is-passive');
 		}
 	});
-	$('#modalClose,#modalOuter').on('click', function () {
-		$('#modalArea').fadeOut(function () {
+	$('#modalClose,#modalOuter').on('click', () => {
+		$('#modalArea').fadeOut(() => {
 			bodyScrollPrevent(false);
 			if ($('#contact')) {
 				$('#contact').toggleClass('is-passive');
@@ -253,17 +253,17 @@ $(function () {
 
 ////////////scroll control for fuckin'IE11////////////
 if (navigator.userAgent.match(/MSIE 10/i) || navigator.userAgent.match(/Trident\/7\./) || navigator.userAgent.match(/Edge\/12\./)) {
-	$('body').on("mousewheel", function () {
+	$('body').on("mousewheel", () => {
 		event.preventDefault();
-		var wd = event.wheelDelta;
-		var csp = window.pageYOffset;
+		const wd = event.wheelDelta;
+		const csp = window.pageYOffset;
 		window.scrollTo(0, csp - wd);
 	});
 }
 ////////////scroll control for fuckin'IE11////////////
 
 ////////////scrollTriggerAll-bottomFixAbsolutely!!!////////////
-$(function () {
+$(() => {
 	$(window).trigger('scroll');
 });
 ////////////scrollTriggerAll-bottomFixAbsolutely!!!////////////

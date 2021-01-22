@@ -7,17 +7,17 @@ import Rellax from '../module/rellax.min';
 const accessFlag = sessionStorage.getItem('accessed');
 
 /////////////////////loading scripts/////////////////////
-(function () {
+$(() => {
 	const loadingArea = $('#loadingArea');
 	if (accessFlag) {
 		loadingPageRemove();
 	} else {
-		$(window).on('load', function () {
+		$(window).on('load', () => {
 			loadingPageShow();
 		});
 	}
 	function loadingPageShow() {
-		setTimeout(function () {
+		setTimeout(() => {
 			loadingArea.addClass('loadingFade').fadeOut(600);
 		}, 1500);
 		sessionStorage.setItem('accessed', true);
@@ -25,12 +25,12 @@ const accessFlag = sessionStorage.getItem('accessed');
 	function loadingPageRemove() {
 		loadingArea.remove();
 	}
-})();
+});
 /////////////////////loading scripts/////////////////////
 
 /////////////////////juicyslider.js
-$(function () {
-	var myslider = $('#myslider');
+$(() => {
+	const myslider = $('#myslider');
 	myslider.juicyslider({
 		mode: "cover",
 		width: '100%',
@@ -46,7 +46,7 @@ $(function () {
 /////////////////////juicyslider.js
 
 /////////////////////Rellax.js
-$(function () {
-	var rellax = new Rellax('.rellax');// eslint-disable-line
+$(() => {
+	const rellax = new Rellax('.rellax');// eslint-disable-line
 });
 /////////////////////Rellax.js
