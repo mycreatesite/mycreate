@@ -7,6 +7,7 @@
   </div>
   <a href="<?php echo home_url();?>"><img class="logo-footer" src="<?php echo get_template_directory_uri(); ?>/common/img/myc_logo_w.svg" alt="ma-ya's CREATE [まーやずくりえいと]"></a>
   <p class="copyright">© Copyright <?php echo date('Y');?> │ ma-ya’s CREATE All rights reserved.</p>
+  <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 </footer>
 
 

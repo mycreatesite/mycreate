@@ -674,7 +674,8 @@ a {
   margin-right:10%;
   @extend %noUserSelect;
   img {
-    width:70%;
+    width:100%;
+    height: auto;
     margin-bottom:10px;
   }
   h3 {
@@ -1035,6 +1036,9 @@ textarea.formArea {
   font-size: 75%;
   letter-spacing: 0px;
   padding-bottom: 50px;
+  + div {
+    font-size: 0;
+  }
 }
 
 /*
