@@ -653,18 +653,8 @@ a {
   img {
     transition: filter 0.5s;
   }
-  &:hover img {
-    -webkit-filter: blur(2px);
-    filter: blur(2px);
-  }
   h3, .skillName p {
     transition: color 0.5s;
-  }
-  &:hover h3 {
-    color: $themeColor;
-  }
-  &:hover .skillName p {
-    color: $themeFontColor;
   }
 }
 
