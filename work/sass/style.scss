@@ -558,9 +558,9 @@ a {
     display:block;
     position: absolute;
     background-color: #fff;
-    bottom:3px;
+    bottom:0;
     left:0;
-    width:98%;
+    width:70%;
     height:1px;
     box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
   }
@@ -569,7 +569,7 @@ a {
 .siteName {
   font-size: 1.3rem;
   letter-spacing: 0.8px;
-  margin-top:4px;
+  margin-top:10px;
 }
 
 .ornamentArea {
@@ -2333,7 +2333,6 @@ html,body {
   font-size: 1.8rem;
   letter-spacing: 3px;
   &::after {
-    bottom: 2px;
     left: -20px;
     width: 80%;
   }
@@ -2342,6 +2341,7 @@ html,body {
 .siteName {
   font-size: 0.95rem;
   letter-spacing: 0.7px;
+  margin-top:8px;
 }
 
 .ornament3 {
