@@ -121,12 +121,12 @@ function fix_svg_thumb_display() {
 add_action('admin_head', 'fix_svg_thumb_display');
 //SVGアップロード許可
 
-//imgタグ中のサイズ等削除
-add_filter( 'post_thumbnail_html', 'custom_attribute' );
-function custom_attribute( $html ){
-    $html = preg_replace('/(width|height)="\d*"\s/', '', $html);
-    return $html;
-}
+//imgタグ中のサイズ等削除→WP5.5より実装されたlazyloadによりコメントアウト
+// add_filter( 'post_thumbnail_html', 'custom_attribute' );
+// function custom_attribute( $html ){
+//     $html = preg_replace('/(width|height)="\d*"\s/', '', $html);
+//     return $html;
+// }
 //imgタグ中のサイズ等削除
 
 //抜粋関係

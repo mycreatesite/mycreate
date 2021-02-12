@@ -730,6 +730,7 @@ a {
   img {
     display: block;
     width:100%;
+    height: auto;
     border-radius: 3px;
   }
   &::before {
@@ -795,6 +796,7 @@ a {
   img {
     display: block;
     width:100%;
+    height: auto;
   }
   a {
     display: block;
@@ -1555,6 +1557,7 @@ a.noContents {
   img {
     display: block;
     width: 100%;
+    height: auto;
     border-radius: 3px;
   }
 }

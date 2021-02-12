@@ -179,6 +179,7 @@ $(() => {
 		const href = $(this).attr('href');
 		const target = $(href == '#' || href === '' ? 'html' : href);
 		const position = target.offset().top;
+		console.log(position);
 		if (href === '#contact') {
 			$('html,body').animate({ scrollTop: position }, 700, 'easeInOutQuart');
 		} else {
