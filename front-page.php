@@ -4,9 +4,9 @@
     <section class="mainVisual contentsFrame">
       <div id="myslider" class="juicyslider">
       	<ul>
-      		<li><img src="<?php echo get_template_directory_uri(); ?>/common/img/slide1.jpg" alt="slide1"></li>
-      		<li><img src="<?php echo get_template_directory_uri(); ?>/common/img/slide2.jpg" alt="slide2"></li>
-      		<li><img src="<?php echo get_template_directory_uri(); ?>/common/img/slide3.jpg" alt="slide3"></li>
+      		<li><img width="1920" height="1080" src="<?php echo get_template_directory_uri(); ?>/common/img/slide1.jpg" alt="slide1"></li>
+      		<li><img width="1920" height="1080" src="<?php echo get_template_directory_uri(); ?>/common/img/slide2.jpg" alt="slide2"></li>
+      		<li><img width="1920" height="1080" src="<?php echo get_template_directory_uri(); ?>/common/img/slide3.jpg" alt="slide3"></li>
       	</ul>
       	<div class="nav next"><i class="fas fa-chevron-right"></i></div>
       	<div class="nav prev"><i class="fas fa-chevron-left"></i></div>
@@ -155,7 +155,7 @@
 			<video class="contactVideo" autoplay loop muted poster="<?php echo get_template_directory_uri();?>/common/img/contact_bg.jpg">
 				<source src="<?php echo get_template_directory_uri();?>/common/img/contact_bg.webm" type="video/webm">
 				<source src="<?php echo get_template_directory_uri();?>/common/img/contact_bg.mp4" type="video/mp4">
-				<img src="<?php echo get_template_directory_uri();?>/common/img/contact_bg.jpg" alt="contact">
+				<img width="1920" height="1080" src="<?php echo get_template_directory_uri();?>/common/img/contact_bg.jpg" alt="contact">
 			</video>
 			<div class="container">
 				<h2 class="heading">contact</h2>
