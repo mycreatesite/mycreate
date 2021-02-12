@@ -8,9 +8,6 @@
     <meta name="theme-color" content="#1e1e1e">
     <title><?php if(!is_home()){wp_title(' - ',true,'right');}?><?php bloginfo('name');?></title>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/common/css/reset.css">
-    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" media="all" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/common/css/juicyslider.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/common/css/luminous-basic.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/common/css/style.css">
@@ -23,6 +20,23 @@
     }
     ?>
     <?php wp_head();?>
+    <script type='text/javascript'>
+      //<![CDATA[ 
+      function loadCSS(e, t, n) {
+        "use strict";
+        var i = window.document.createElement("link");
+        var o = t || window.document.getElementsByTagName("script")[0];
+        i.rel = "stylesheet";
+        i.href = e;
+        i.media = "only x";
+        o.parentNode.insertBefore(i, o);
+        setTimeout(function () { i.media = n || "all" })
+      }
+      loadCSS("https://use.fontawesome.com/releases/v5.0.6/css/all.css");
+      loadCSS("https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css");
+      loadCSS("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css");
+      //]]> 
+    </Script>
   </head>
 
   <body <?php if (is_home() || is_front_page()):?> class="home"<?php endif;?> >
