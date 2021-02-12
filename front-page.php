@@ -110,7 +110,7 @@
           </div>
         <?php endwhile; ?>
         <?php wp_reset_postdata(); ?>
-        <p class="moreArea"><a class="btn" href="<?php echo home_url('/gallery');?>">more</a></p>
+        <p class="moreArea"><a class="btn" href="<?php echo home_url('/gallery');?>">more gallery</a></p>
       </div>
     </section>
 
@@ -146,7 +146,7 @@
           ?>
 
         </div>
-        <p class="moreArea"><a class="btn" href="<?php echo home_url('/allblogs');?>">more</a></p>
+        <p class="moreArea"><a class="btn" href="<?php echo home_url('/allblogs');?>">more blog</a></p>
       </div>
     </section>
 
