@@ -11,7 +11,7 @@ remove_action('wp_head', 'wp_generator');
 //script読み分け
 function loadMyJsScripts() {
   if ( !is_admin() ){
-    wp_enqueue_script('jquery','//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js');
+    wp_enqueue_script('jquery','//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js');
     wp_enqueue_script('jquery-ui-core','//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js', array('jquery'));
   }
   if ( is_home() || is_front_page() ){
