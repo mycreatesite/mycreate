@@ -128,14 +128,6 @@ add_action('admin_head', 'fix_svg_thumb_display');
 //     return $html;
 // }
 //imgタグ中のサイズ等削除
-//imgタグ中のクラス削除
-add_filter( 'post_thumbnail_html', 'custom_attribute' );
-function custom_attribute( $html ){
-    // class を削除する
-    $html = preg_replace('/class=".*\w+"\s/', '', $html);
-    return $html;
-}
-//imgタグ中のクラス削除
 
 //抜粋関係
 function mycreate_excerpt($length) {
