@@ -188,7 +188,7 @@
       <nav id="navHeader" class="navHeader">
         <ul>
           <li class="logoFollow">
-            <a href="<?php echo home_url();?>"><img src="<?php echo get_template_directory_uri(); ?>/common/img/myc_logo_blk.svg" alt="ma-ya's CREATE [まーやずくりえいと]"></a>
+            <a href="<?php echo home_url();?>"><img width="80" height="40" src="<?php echo get_template_directory_uri(); ?>/common/img/myc_logo_blk.svg" alt="ma-ya's CREATE [まーやずくりえいと]"></a>
           </li>
           <li><a class="modalOpen">what's new?</a></li>
           <li><a href="<?php if ( is_home() || is_front_page() ) : ?>#introduction<?php else : ?><?php echo home_url('?id=introduction');?><?php endif; ?>">introduction</a></li>
@@ -201,7 +201,7 @@
       <nav id="spNavHeader" class="spNavHeader">
         <ul>
           <li class="logoSpNav">
-            <a href="<?php echo home_url();?>"><img src="<?php echo get_template_directory_uri(); ?>/common/img/myc_logo_w.svg" alt="ma-ya's CREATE [まーやずくりえいと]"></a>
+            <a href="<?php echo home_url();?>"><img width="90" height="45" src="<?php echo get_template_directory_uri(); ?>/common/img/myc_logo_w.svg" alt="ma-ya's CREATE [まーやずくりえいと]"></a>
           </li>
           <li><a class="modalOpen">what's new?</a></li>
           <li><a href="<?php if ( is_home() || is_front_page() ) : ?>#introduction<?php else : ?><?php echo home_url('?id=introduction');?><?php endif; ?>">introduction</a></li>
