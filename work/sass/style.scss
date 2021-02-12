@@ -447,6 +447,11 @@ a {
   padding: 120px 0 72px;
   text-align: center;
   background-color: #fff;
+  .logoHeader {
+    a {
+      display: inline-block;
+    }
+  }
 }
 
 .subTxt {

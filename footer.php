@@ -5,7 +5,7 @@
     <a href="https://github.com/mycreatesite/" target="_blank" rel="noopener"><i class="fab fa-github snsIcon"></i></a>
     <a href="https://codepen.io/mycreatesite/" target="_blank" rel="noopener"><i class="fab fa-codepen snsIcon"></i></a>
   </div>
-  <a href="<?php echo home_url();?>"><img class="logo-footer" src="<?php echo get_template_directory_uri(); ?>/common/img/myc_logo_w.svg" alt="ma-ya's CREATE [まーやずくりえいと]"></a>
+  <a href="<?php echo home_url();?>"><img width="70" height="35" class="logo-footer" src="<?php echo get_template_directory_uri(); ?>/common/img/myc_logo_w.svg" alt="ma-ya's CREATE [まーやずくりえいと]"></a>
   <p class="copyright">© Copyright <?php echo date('Y');?> │ ma-ya’s CREATE All rights reserved.</p>
   <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 </footer>
@@ -22,7 +22,7 @@
 <?php if (is_home() || is_front_page()):?>
 <div id="mogiFooter">
   <a href="https://tamtam-1p-diary.netlify.app/" target="_blank" rel=”noopener noreferrer”>
-    <img class="mogiFooterImg" src="<?php echo get_template_directory_uri(); ?>/common/img/tamtam_footer.svg" alt="たむたむのひとこと日記">
+    <img width="135" height="165" class="mogiFooterImg" src="<?php echo get_template_directory_uri(); ?>/common/img/tamtam_footer.svg" alt="たむたむのひとこと日記">
   </a>
 </div>
 <?php endif; ?>

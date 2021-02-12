@@ -38,7 +38,7 @@
         <div class="skillsLayout">
           <div class="skill forShow1 clearfix">
             <div class="skillName">
-              <img src="<?php echo get_template_directory_uri(); ?>/common/img/coding.svg" alt="コーディング">
+              <img width="150" height="150" src="<?php echo get_template_directory_uri(); ?>/common/img/coding.svg" alt="コーディング">
               <h3>コーディング</h3>
               <p class="keycolorTx italic">coding</p>
             </div>
@@ -48,7 +48,7 @@
           </div>
           <div class="skill forShow1 clearfix">
             <div class="skillName">
-              <img src="<?php echo get_template_directory_uri(); ?>/common/img/wp.svg" alt="CMSサイト構築">
+              <img width="150" height="150" src="<?php echo get_template_directory_uri(); ?>/common/img/wp.svg" alt="CMSサイト構築">
               <h3>CMSサイト</h3>
               <p class="keycolorTx italic">cms website</p>
             </div>
@@ -58,7 +58,7 @@
           </div>
           <div class="skill forShow1 clearfix">
             <div class="skillName">
-              <img src="<?php echo get_template_directory_uri(); ?>/common/img/print.svg" alt="印刷物">
+              <img width="150" height="150" src="<?php echo get_template_directory_uri(); ?>/common/img/print.svg" alt="印刷物">
               <h3>印刷物</h3>
               <p class="keycolorTx italic">printed matter</p>
             </div>
@@ -68,7 +68,7 @@
           </div>
           <div class="skill forShow1 clearfix">
             <div class="skillName">
-              <img src="<?php echo get_template_directory_uri(); ?>/common/img/graph.svg" alt="コーディング">
+              <img width="150" height="150" src="<?php echo get_template_directory_uri(); ?>/common/img/graph.svg" alt="コーディング">
               <h3>WEB画像</h3>
               <p class="keycolorTx italic">web banner</p>
             </div>
