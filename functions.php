@@ -193,6 +193,20 @@ function get_modifiedTime($format) {
 }
 //投稿最終更新日表示
 
+//スパム対策
+function wpcf7_validate_spam_message( $result, $tag ) {
+  $value = str_replace(array(PHP_EOL,' '), '', esc_attr($_POST['your-subject']));
+  if (!empty($value)) {
+    if (preg_match('/^[!-~]+$/', $value)) {
+      $result['valid'] = false;
+      $result['reason'] = array('your-subject' => '日本語で入力してください');
+    }
+  }
+  return $result;
+}
+add_filter( 'wpcf7_validate', 'wpcf7_validate_spam_message', 10, 2 );
+//スパム対策
+
 //////////////////////////ショートコード//////////////////////////
 //ma-ya’s CREATE
 function shortcode_myc(){
