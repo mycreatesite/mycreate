@@ -17,8 +17,9 @@ $(() => {
 		});
 	}
 	function loadingPageShow() {
+		loadingArea.addClass('loadingStart');
 		setTimeout(() => {
-			loadingArea.addClass('loadingFade').fadeOut(600);
+			loadingArea.addClass('loadingFadeTo').fadeOut(600);
 		}, 1500);
 		sessionStorage.setItem('accessed', true);
 	}

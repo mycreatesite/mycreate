@@ -1713,7 +1713,7 @@ a.noContents {
   transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-.loadingFade {
+.loadingFadeTo {
   transform: translate3d(0,-100%,0) skewY(-5deg);
 }
 
@@ -1723,6 +1723,11 @@ a.noContents {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+  .loadingStart & {
+    opacity: 1;
+  }
 }
 
 .spinner {
