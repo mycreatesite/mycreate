@@ -12,7 +12,7 @@
       	<div class="nav prev"><i class="fas fa-chevron-left"></i></div>
       </div>
       <div class="container">
-        <div class="proverbArea rellax" data-rellax-speed="-1">
+        <div class="proverbArea rellax" data-rellax-speed="-2">
           <p class="proverb">move,forward.</p>
           <p class="siteName"><span class="keycolorTx italic">web design</span> ma-ya’s CREATE</p>
         </div>

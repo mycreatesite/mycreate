@@ -543,7 +543,8 @@ a {
   background-color: $bodyBg;
   .container {
     position: relative;
-    top: -60%;
+    top: 50%;
+    transform: translateY(-50%);
     pointer-events: none;
   }
 }
@@ -2074,14 +2075,6 @@ html,body {
 }
 
 /*
- ////////////////mainVisual-tablet////////////////
-*/
-
-.mainVisual .container {
-  top: -65%;
-}
-
-/*
  ////////////////skills-tablet////////////////
 */
 
@@ -2339,10 +2332,8 @@ html,body {
 */
 
 .mainVisual {
-  height: 140vw;
-  .container {
-    top: -70%;
-  }
+  height: calc(100vh - 183px);
+  min-height: 385px;
 }
 
 .proverb {

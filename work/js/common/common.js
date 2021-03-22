@@ -253,14 +253,14 @@ $(() => {
 ////////////modal////////////
 
 ////////////scroll control for fuckin'IE11////////////
-if (navigator.userAgent.match(/MSIE 10/i) || navigator.userAgent.match(/Trident\/7\./) || navigator.userAgent.match(/Edge\/12\./)) {
-	$('body').on("mousewheel", () => {
-		event.preventDefault();
-		const wd = event.wheelDelta;
-		const csp = window.pageYOffset;
-		window.scrollTo(0, csp - wd);
-	});
-}
+// if (navigator.userAgent.match(/MSIE 10/i) || navigator.userAgent.match(/Trident\/7\./) || navigator.userAgent.match(/Edge\/12\./)) {
+// 	$('body').on("mousewheel", () => {
+// 		event.preventDefault();
+// 		const wd = event.wheelDelta;
+// 		const csp = window.pageYOffset;
+// 		window.scrollTo(0, csp - wd);
+// 	});
+// }
 ////////////scroll control for fuckin'IE11////////////
 
 ////////////scrollTriggerAll-bottomFixAbsolutely!!!////////////
