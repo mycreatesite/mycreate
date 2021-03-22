@@ -72,11 +72,12 @@ a {
 
 .btn {
   display: inline-block;
+  text-align: center;
   font-size: 1.2rem;
   font-weight: 300;
   letter-spacing: 3px;
   line-height: 1.5;
-  padding: 5px 35px;
+  padding: 10px 35px;
   border: 1px solid #1e1e1e;
   border-radius: 2px;
   background-color: transparent;
@@ -1141,7 +1142,7 @@ textarea.formArea {
   border: none;
   border-radius: 2px;
   line-height: 2.5;
-  height: 2.8rem;
+  height: 50px;
   background-color: #fff;
   box-shadow: $themeShadow;
 }
@@ -1152,7 +1153,7 @@ textarea.formArea {
 
 .searchBtn {
   position: absolute;
-  top:10px;
+  top:15px;
   left:-30px;
   font-size: 1.3rem;
   color: #1e1e1e;
@@ -1167,18 +1168,16 @@ textarea.formArea {
 }
 
 .linkToAllArea {
-  text-align: center;
-  .btnToList + .btnToList {
+  .btnBlock + .btnBlock {
     margin-top: 10px;
   }
 }
 
-.btnToList {
+.btnBlock {
   width: 100%;
-  padding: 5px;
+  padding: 10px;
   letter-spacing: 2px;
   font-weight: normal;
-  font-size: 1.2rem;
   &:hover {
     letter-spacing: 2px;
   }
@@ -1982,31 +1981,34 @@ html,body {
  ////////////////////////////////2Column-tablet&mobile////////////////////////////////
 */
 
-.mainContent, .sideBar {
+.mainContent {
   width: 100%;
   margin-right: 0;
   margin-bottom: 50px;
+  float: none;
+}
+
+.sideBar {
+  width: 80%;
+  margin: 0 auto 50px;
+  float: none;
 }
 
 .searchInput {
   padding-left: 45px;
   line-height: 1.5;
-  height: 35px;
 }
 
 .searchBtn {
-  top: 8px;
+  top: 16px;
   left: 10px;
   font-size: 1.3rem;
 }
 
-.btnToList {
-  padding: 5px 15px;
-}
+
 
 .searchArea, .linkToAllArea {
   display: block;
-  width: 80%;
   margin: 0 auto 20px;
 }
 
@@ -2017,8 +2019,11 @@ html,body {
 .categoryArea, .archiveArea {
   display: inline-block;
   vertical-align: top;
-  margin-left: 10%;
   margin-bottom: 0;
+}
+
+.archiveArea {
+  margin-left: 10%;
 }
 
 .archiveArea {
@@ -2162,6 +2167,9 @@ html,body {
 @media screen and (max-width: $spWidth){
 .container {
   width: 90%;
+  .blog & {
+    width: 95%;
+  }
 }
 
 /*
@@ -2448,6 +2456,10 @@ html,body {
  ////////////////////////////////2column-mobile///////////////////////////////////////
 */
 
+.sideBar {
+  width: 90%;
+}
+
 .contentsWrap {
   width: 95%;
   padding: 50px 0 100px;
@@ -2461,13 +2473,6 @@ html,body {
 .heading, .headingSearch {
 	margin-bottom: 50px;
   }
-
-.searchArea, .linkToAllArea {
-  width: 90%;
-}
-.categoryArea {
-  margin-left: 5%;
-}
 
 /*
  ////////////////////////////////single-mobile///////////////////////////////////////

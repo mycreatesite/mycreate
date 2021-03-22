@@ -11,8 +11,8 @@
     </form>
   </div>
   <div class="linkToAllArea">
-    <a class="btn btnToList" href="<?php echo home_url('/allblogs');?>">all blogs</a>
-    <a class="btn btnToList" href="<?php echo home_url('/gallery');?>">to gallery</a>
+    <a class="btn btnBlock" href="<?php echo home_url('/allblogs');?>">all blogs</a>
+    <a class="btn btnBlock" href="<?php echo home_url('/gallery');?>">to gallery</a>
   </div>
   <div class="categoryArea">
     <h2 class="headingSide">category</h2>
