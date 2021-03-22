@@ -2162,13 +2162,6 @@ html,body {
 @media screen and (max-width: $spWidth){
 .container {
   width: 90%;
-  .blog & {
-    width: 95%;
-  }
-}
-
-.introduction .container, .skills .container {
-  width: 80%;
 }
 
 /*
