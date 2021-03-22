@@ -88,7 +88,7 @@
 
 
     <header class="header">
-      <h1 class="logoHeader">
+      <?php if (is_home() || is_front_page()):?><h1 class="logoHeader"><?php else:?><p class="logoHeader"><?php endif;?>
         <a href="<?php echo home_url();?>">
           <svg version="1.1" id="mycLogo" class="mycLogo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 634.471 316.48" width="130" height="65">
             <title>ma-ya's CREATE [まーやずくりえいと]</title>
@@ -198,7 +198,7 @@
             </g>
           </svg>
         </a>
-      </h1>
+      <?php if (is_home() || is_front_page()):?></h1><?php else:?></p><?php endif;?>
       <nav id="navHeader" class="navHeader">
         <ul>
           <li class="logoFollow">

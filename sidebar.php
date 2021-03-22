@@ -15,7 +15,7 @@
     <a class="btn btnToList" href="<?php echo home_url('/gallery');?>">to gallery</a>
   </div>
   <div class="categoryArea">
-    <h4 class="headingSide">category</h4>
+    <h2 class="headingSide">category</h2>
     <ul>
       <?php
         $args = array(
@@ -27,7 +27,7 @@
     </ul>
   </div>
   <div class="archiveArea">
-    <h4 class="headingSide">archive</h4>
+    <h2 class="headingSide">archive</h2>
     <ul>
       <?php
         $args = array(

@@ -14,7 +14,7 @@
       <div class="container">
         <div class="proverbArea rellax" data-rellax-speed="-1">
           <p class="proverb">move,forward.</p>
-          <h1 class="siteName"><span class="keycolorTx italic">web design</span> ma-ya’s CREATE</h1>
+          <p class="siteName"><span class="keycolorTx italic">web design</span> ma-ya’s CREATE</p>
         </div>
       </div>
       <div class="ornamentArea">
