@@ -35,8 +35,8 @@
     <section id="skills" class="skills contentsFrame">
       <div class="container">
         <h2 class="heading">skills</h2>
-        <div class="skillsLayout">
-          <div class="skill forShow1 clearfix">
+        <div class="skillLayout">
+          <div class="skill forShow1">
             <div class="skillName">
               <img width="150" height="150" src="<?php echo get_template_directory_uri(); ?>/common/img/coding.svg" alt="コーディング">
               <h3>コーディング</h3>
@@ -46,7 +46,7 @@
               <p>HTML / CSSによるコーディングをはじめとして、JavaScript等で動きを持たせたWEBサイトの構築が可能です。またサイト全体のデザイン・コーディングはもちろん、ランディングページ等の単体ページ制作もお気軽にご相談ください。</p>
             </div>
           </div>
-          <div class="skill forShow1 clearfix">
+          <div class="skill forShow1">
             <div class="skillName">
               <img width="150" height="150" src="<?php echo get_template_directory_uri(); ?>/common/img/wp.svg" alt="CMSサイト構築">
               <h3>CMSサイト</h3>
@@ -56,7 +56,7 @@
               <p>Wordpressを用いたWEBサイト構築が可能です。既存テーマのカスタマイズはもちろん、独自テーマ作成にも対応致します。当サイトも独自テーマにより構築しております。なおWixなど他CMSサービスによるサイト制作等もご相談下さい。</p>
             </div>
           </div>
-          <div class="skill forShow1 clearfix">
+          <div class="skill forShow1">
             <div class="skillName">
               <img width="150" height="150" src="<?php echo get_template_directory_uri(); ?>/common/img/print.svg" alt="印刷物">
               <h3>印刷物</h3>
@@ -66,7 +66,7 @@
               <p>チラシ・フライヤー・パッケージからCDジャケット・オリジナルグッズデザイン等の印刷物デザインが可能です。制作物によりますが、ご希望により印刷業者への入稿まで対応することでクライアント様側の負担を最小限とすることも可能です。</p>
             </div>
           </div>
-          <div class="skill forShow1 clearfix">
+          <div class="skill forShow1">
             <div class="skillName">
               <img width="150" height="150" src="<?php echo get_template_directory_uri(); ?>/common/img/graph.svg" alt="コーディング">
               <h3>WEB画像</h3>
@@ -84,32 +84,34 @@
     <section id="gallery" class="gallery contentsFrame">
       <div class="container">
         <h2 class="heading">gallery</h2>
-        <?php
-          $pickupGallery = array(
-            'post_type' => 'gallery',
-            'posts_per_page' => 2,
-            'meta_query' => array(
-              array(
-                'key'=>'pickup',
-                'value'=>'1',
+        <div class="galleryLayout">
+          <?php
+            $pickupGallery = array(
+              'post_type' => 'gallery',
+              'posts_per_page' => 2,
+              'meta_query' => array(
+                array(
+                  'key'=>'pickup',
+                  'value'=>'1',
+                )
               )
-            )
-          );
-          $pickupGallery_query = new WP_Query($pickupGallery);
-        ?>
-        <?php while ( $pickupGallery_query->have_posts() ) : $pickupGallery_query->the_post(); ?>
-          <?php $galleryClasses = array('galleryItem','forShow2');?>
-          <div id="post-<?php the_ID();?>" <?php post_class($galleryClasses);?>>
-            <a href="<?php the_permalink();?>">
-              <?php if (has_post_thumbnail()) : ?>
-                <?php the_post_thumbnail('thumbnail');?>
-              <?php else : ?>
-                <img src="<?php echo get_template_directory_uri();?>/common/img/noimage.svg">
-              <?php endif; ?>
-            </a>
-          </div>
-        <?php endwhile; ?>
-        <?php wp_reset_postdata(); ?>
+            );
+            $pickupGallery_query = new WP_Query($pickupGallery);
+          ?>
+          <?php while ( $pickupGallery_query->have_posts() ) : $pickupGallery_query->the_post(); ?>
+            <?php $galleryClasses = array('galleryItem','forShow2');?>
+            <div id="post-<?php the_ID();?>" <?php post_class($galleryClasses);?>>
+              <a href="<?php the_permalink();?>">
+                <?php if (has_post_thumbnail()) : ?>
+                  <?php the_post_thumbnail('thumbnail');?>
+                <?php else : ?>
+                  <img src="<?php echo get_template_directory_uri();?>/common/img/noimage.svg">
+                <?php endif; ?>
+              </a>
+            </div>
+          <?php endwhile; ?>
+          <?php wp_reset_postdata(); ?>
+        </div>
         <p class="moreArea"><a class="btn" href="<?php echo home_url('/gallery');?>">more gallery</a></p>
       </div>
     </section>
@@ -117,8 +119,7 @@
     <section id="blog" class="blog contentsFrame bottomFlip">
       <div class="container">
         <h2 class="heading">blog</h2>
-        <div class="blogs clearfix">
-
+        <div class="blogLayout">
           <?php
             if(have_posts()):
             while(have_posts()):the_post();
@@ -144,7 +145,6 @@
             endwhile;
             endif;
           ?>
-
         </div>
         <p class="moreArea"><a class="btn" href="<?php echo home_url('/allblogs');?>">more blog</a></p>
       </div>

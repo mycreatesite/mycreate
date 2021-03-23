@@ -647,13 +647,14 @@ a {
  ////////////////skills////////////////
 */
 
-.skillsLayout {
+.skillLayout {
   display: flex;
   flex-wrap: wrap;
   margin-bottom : 30px;
 }
 
 .skill {
+  display: flex;
   width:48%;
   padding:40px;
   margin-bottom:30px;
@@ -672,12 +673,11 @@ a {
 }
 
 .skillName {
-  width:30%;
-  float: left;
+  flex: 0 0 30%;
   margin-right:10%;
   @extend %noUserSelect;
   img {
-    width:100%;
+    width: 80px;
     height: auto;
     margin-bottom:10px;
   }
@@ -692,8 +692,6 @@ a {
 }
 
 .skillDesc {
-  width:60%;
-  float: left;
   p {
     text-align: left;
     letter-spacing: 3px;
@@ -705,18 +703,21 @@ a {
  ////////////////gallery////////////////
 */
 
+.galleryLayout {
+  display: flex;
+}
+
 .galleryItem {
   position: relative;
-  display: inline-block;
   width:48%;
-  max-width: 500px;
   margin-bottom:60px;
   box-shadow: $themeShadow;
   border-radius: 3px;
   + .galleryItem {
-    margin-left:3%;
+    margin-left:4%;
   }
   > a {
+    display: block;
     &::after {
       content: 'PICKUP';
       position: absolute;
@@ -790,13 +791,13 @@ a {
   padding-bottom: 110px;
 }
 
-.blogs {
+.blogLayout {
+  display: flex;
   margin-bottom:60px;
 }
 
 .blogItem {
   position: relative;
-  float:left;
   width:30%;
   text-align: left;
   overflow: hidden;
@@ -1520,9 +1521,9 @@ a.noContents {
 */
 
 .archiveItem {
+  display: flex;
+  align-items: center;
   width: 100%;
-  display: table;
-  table-layout: fixed;
   padding: 40px 30px;
   margin-bottom: 25px;
   text-align: left;
@@ -1558,9 +1559,8 @@ a.noContents {
 }
 
 .archiveItemImg {
-  display: table-cell;
-  vertical-align: middle;
   width: 35%;
+  min-width: 80px;
   padding-right: 5%;
   img {
     display: block;
@@ -1571,10 +1571,8 @@ a.noContents {
 }
 
 .archiveItemText {
-  display: table-cell;
   word-wrap : break-word;
   overflow-wrap : break-word;
-  vertical-align: middle;
   width: 65%;
 }
 
@@ -1879,16 +1877,18 @@ html,body {
  ////////////////blog-tablet&mobile////////////////
 */
 
-.blogs {
+.blogLayout {
+  display: block;
   margin-bottom:30px;
 }
 
 .blogItem {
   width:100%;
   margin-bottom:30px;
-  a {
-    display: table;
+  
+  > a {
     width: 100%;
+    display: flex;
     &:hover {
       opacity: 0.8;
     }
@@ -1899,9 +1899,8 @@ html,body {
 }
 
 .blogImg {
-  display: table-cell;
-  vertical-align: middle;
   width: 25%;
+  min-width: 80px;
   margin: 0;
   &::before {
     border-radius: 3px 0 0 3px;
@@ -1913,14 +1912,8 @@ html,body {
 }
 
 .blogText {
-  display: table-cell;
-  vertical-align: middle;
   width: 75%;
   padding: 2% 4%;
-}
-
-.postDate, .category, .blogTitle {
-  float: none;
 }
 
 .postDate, .category {
@@ -2093,7 +2086,6 @@ html,body {
 .skillName {
   margin-right:5%;
   img {
-    width:50%;
     margin-bottom:0px;
   }
   h3 {
@@ -2368,11 +2360,13 @@ html,body {
  ////////////////skills-mobile////////////////
 */
 
-.skillsLayout {
+.skillLayout {
   margin-bottom : 15px;
 }
 
 .skill {
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   padding: 9%;
   &:nth-of-type(even){
@@ -2381,12 +2375,7 @@ html,body {
 }
 
 .skillName {
-  width:100%;
-  display: block;
   margin-right:0%;
-  img {
-    width:30%;
-  }
   p {
     margin-bottom: 20px;
   }
@@ -2400,6 +2389,10 @@ html,body {
 /*
  ////////////////gallery-mobile////////////////
 */
+
+.galleryLayout {
+  display: block;
+}
 
 .galleryItem {
   width:100%;
