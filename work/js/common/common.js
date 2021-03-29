@@ -104,7 +104,7 @@ $(() => {
 			rollBack.fadeOut(500);
 		}
 		//helloMogi_func
-		if (contentsHeight - (scroll + windowHeight) < 100) {
+		if (contentsHeight - (scroll + windowHeight) < 300) {
 			mogiFooter.show(function () {
 				$(this).addClass('helloMogi');
 			});
