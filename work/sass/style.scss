@@ -1513,6 +1513,7 @@ a.noContents {
   text-align: center;
   background-color: $galleryColor;
   border-radius: 1px;
+  margin-bottom: 1rem;
   @extend %noUserSelect;
 }
 
