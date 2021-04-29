@@ -30,9 +30,19 @@ $(() => {
 });
 /////////////////////loading scripts/////////////////////
 
-/////////////////////juicyslider.js
+/////////////////////Parallax.js, juicyslider.js
+
 $(() => {
+	const scenes = document.querySelectorAll('.scene');
 	const myslider = $('#myslider');
+	//Parallax.js
+	scenes.forEach((scene)=>{
+		new Parallax(scene, {
+			scalarX: 0.5,
+			scalarY: 0.5
+		});
+	});
+	//juicyslider.js
 	myslider.juicyslider({
 		mode: "cover",
 		width: '100%',
@@ -45,24 +55,11 @@ $(() => {
 		hide: { effect: 'fade', duration: 1500 },
 	});
 });
-/////////////////////juicyslider.js
+
+/////////////////////Parallax.js, juicyslider.js
 
 /////////////////////Rellax.js
 $(() => {
 	const rellax = new Rellax('.rellax');// eslint-disable-line
 });
-/////////////////////Rellax.js
-
-/////////////////////Rellax.js
-
-$(() => {
-	const scenes = document.querySelectorAll('.scene');
-	scenes.forEach((scene)=>{
-		new Parallax(scene, {
-			scalarX: 1,
-			scalarY: 1
-		});
-	});
-});
-
 /////////////////////Rellax.js
