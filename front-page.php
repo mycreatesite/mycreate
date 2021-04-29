@@ -4,9 +4,9 @@
     <section class="mainVisual contentsFrame">
       <div id="myslider" class="juicyslider">
       	<ul>
-      		<li><img width="1500" height="844" src="<?php echo get_template_directory_uri(); ?>/common/img/slide1.jpg" alt="slide1"></li>
-      		<li><img width="1200" height="807" src="<?php echo get_template_directory_uri(); ?>/common/img/slide2.jpg" alt="slide2"></li>
-      		<li><img width="1213" height="834" src="<?php echo get_template_directory_uri(); ?>/common/img/slide3.jpg" alt="slide3"></li>
+      		<li class="scene"><img data-depth="0.90" width="1500" height="844" src="<?php echo get_template_directory_uri(); ?>/common/img/slide1.jpg" alt="slide1"></li>
+      		<li class="scene"><img data-depth="0.90" width="1200" height="807" src="<?php echo get_template_directory_uri(); ?>/common/img/slide2.jpg" alt="slide2"></li>
+      		<li class="scene"><img data-depth="0.90" width="1213" height="834" src="<?php echo get_template_directory_uri(); ?>/common/img/slide3.jpg" alt="slide3"></li>
       	</ul>
       	<div class="nav next"><i class="fas fa-chevron-right"></i></div>
       	<div class="nav prev"><i class="fas fa-chevron-left"></i></div>

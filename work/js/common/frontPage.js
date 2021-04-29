@@ -1,6 +1,7 @@
 ////////////imports////////////
 
 import Rellax from '../module/rellax.min';
+import Parallax from 'parallax-js/dist/parallax.min.js';
 
 ////////////global variable////////////
 
@@ -50,4 +51,18 @@ $(() => {
 $(() => {
 	const rellax = new Rellax('.rellax');// eslint-disable-line
 });
+/////////////////////Rellax.js
+
+/////////////////////Rellax.js
+
+$(() => {
+	const scenes = document.querySelectorAll('.scene');
+	scenes.forEach((scene)=>{
+		new Parallax(scene, {
+			scalarX: 1,
+			scalarY: 1
+		});
+	});
+});
+
 /////////////////////Rellax.js
