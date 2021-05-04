@@ -38,8 +38,8 @@ $(() => {
 	//Parallax.js
 	scenes.forEach((scene)=>{
 		new Parallax(scene, {
-			scalarX: 0.5,
-			scalarY: 0.5
+			scalarX: 0.7,
+			scalarY: 1
 		});
 	});
 	//juicyslider.js
