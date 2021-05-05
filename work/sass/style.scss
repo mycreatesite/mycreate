@@ -1276,6 +1276,7 @@ img.aligncenter {
   letter-spacing: 2px;
   border-bottom: solid 2px $themeColor;
   position: relative;
+  padding-bottom: 10px;
   &::after {
     position: absolute;
     content: '';
@@ -1287,11 +1288,12 @@ img.aligncenter {
 }
 
 .articleAreaBody h3 {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: bold;
   letter-spacing: 2px;
   padding-bottom: 2px;
-  border-bottom: dashed 2px $blogHeadingColor;
+  border-bottom: dashed 1px $blogHeadingColor;
+  padding-bottom: 10px;
   &::before {
     content : map-get($icons,postH3);
     font-family: $fontAwesome;
@@ -1302,7 +1304,7 @@ img.aligncenter {
 }
 
 .articleAreaBody h4 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   letter-spacing: 2px;
   &::before {
@@ -2492,10 +2494,10 @@ html,body {
     font-size: 1.3rem;
   }
   h3 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   h4 {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   h2, h3, h4 {
     letter-spacing: 1.5px;
