@@ -30,11 +30,17 @@
     <h2 class="headingSide">archive</h2>
     <ul>
       <?php
-        $args = array(
-          'type'=>'monthly',
+        $monthArgs = array(
+          'limit'=>'12',
           'show_post_count'=>'true',
         );
-        wp_get_archives($args);
+        wp_get_archives($monthArgs);
+      ?>
+      <?php
+        $yearArgs = array(
+          'type'=>'yearly'
+        );
+        wp_get_archives($yearArgs);
       ?>
     </ul>
   </div>
