@@ -2,7 +2,7 @@
   <div id="modalOuter" class="modalOuter"></div>
     <div class="modalInner">
       <div class="modalWrapper">
-        <div id="modalClose" class="modalClose">
+        <div id="modalClose" class="modalClose mouseStalker">
           <i class="fas fa-times"></i>
         </div>
         <div class="modalContents">

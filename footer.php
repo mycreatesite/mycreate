@@ -13,7 +13,7 @@
 
 
 <!--rollBack-->
-<div id="rollBack">
+<div id="rollBack" class="mouseStalker">
   <i class="fas fa-chevron-up faa-float animated" aria-hidden="true"></i>
 </div>
 <!--rollBack-->
@@ -29,6 +29,8 @@
 <?php endif; ?>
 <!--mogiFooter-->
 
+<div id="cursor"></div>
+<div id="stalker"></div>
 
 <?php get_template_part('modals');?>
 <?php wp_footer();?>

@@ -263,6 +263,32 @@ $(() => {
 // }
 ////////////scroll control for fuckin'IE11////////////
 
+////////////mouse stalker////////////
+$(function(){
+	
+	const cursor = document.getElementById('cursor');
+	const stalker = document.getElementById('stalker');
+
+	document.addEventListener('mousemove', translate);
+	
+	function translate(e) {
+		cursor.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+		stalker.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+	}
+
+	const linkEl = document.querySelectorAll('a, #myslider .nav, .mouseStalker');
+	for (let i = 0; i < linkEl.length; i++) {
+		linkEl[i].addEventListener('mouseover', function () {
+			cursor.classList.add('is-hovered');
+		});
+		linkEl[i].addEventListener('mouseout', function () {
+			cursor.classList.remove('is-hovered');      
+		});
+	}
+	
+});
+////////////mouse stalker////////////
+
 ////////////scrollTriggerAll-bottomFixAbsolutely!!!////////////
 $(() => {
 	$(window).trigger('scroll');

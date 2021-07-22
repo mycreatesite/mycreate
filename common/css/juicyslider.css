@@ -73,7 +73,7 @@ html, body {
     padding: 20px;
     opacity: 0;
     filter: alpha(opacity=0);
-    cursor: pointer;
+    /* cursor: pointer; */
     z-index: 1000;
     transition: all 0.3s ease-in-out;
     color: #fff;
