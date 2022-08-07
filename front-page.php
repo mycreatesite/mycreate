@@ -27,7 +27,7 @@
     <section id="introduction" class="introduction contentsFrame">
       <div class="container">
         <h2 class="heading">introduction</h2>
-        <p id="commentAnim">初めまして。東京・神奈川を拠点とするWEBデザイナー、ma-ya’s CREATE［まーやずくりえいと］といいます。都内の制作会社でWEBデザイナーとして勤務しつつ、休日はWEBで遊ぶかお酒（ホッピー）を呷って過ごします。WEB制作は半分趣味。WEBから印刷系デザインまで、やれそうなことなら何でもやりたい派。シンプルでスマートな中にほんのりとポップさを感じるデザインを基本に置きつつ、ダイナミックな表現や異なるテイストを出せるように奮闘する、気づけば30代のいいオッサンです。</p>
+        <p id="commentAnim"><?php the_author_meta('user_description'); ?></p>
         <p class="moreArea"><a class="btn" href="<?php echo home_url('/gallery');?>">gallery</a></p>
       </div>
     </section>
