@@ -3,24 +3,21 @@
 import Rellax from '../module/rellax.min';
 import Parallax from 'parallax-js/dist/parallax.min.js';
 
-////////////global variable////////////
-
-const accessFlag = sessionStorage.getItem('accessed');
-
 /////////////////////loading scripts/////////////////////
 $(() => {
+	const accessFlag = sessionStorage.getItem('accessed');
 	const loadingArea = $('#loadingArea');
 	if (accessFlag) {
 		loadingPageRemove();
 	} else {
-		$(window).on('load', () => {
-			loadingPageShow();
-		});
+		loadingPageShow();
 	}
 	function loadingPageShow() {
 		loadingArea.addClass('loadingStart');
 		setTimeout(() => {
-			loadingArea.addClass('loadingFadeTo').fadeOut(600);
+			loadingArea.addClass('loadingFadeTo').fadeOut(600,function(){
+				$(this).remove();
+			});
 		}, 1500);
 		sessionStorage.setItem('accessed', true);
 	}

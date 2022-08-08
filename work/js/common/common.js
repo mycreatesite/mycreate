@@ -6,10 +6,10 @@ import '../module/modernizr-custom';
 ////////////global variable////////////
 
 const body = $('body');
-const accessFlag = sessionStorage.getItem('accessed');
 
 ////////////Draw SVG////////////
 (() => {
+	const accessFlag = sessionStorage.getItem('accessed');
 	const mycLogo = $("#mycLogo").drawsvg({
 		duration: 1000,
 		stagger: 80,
