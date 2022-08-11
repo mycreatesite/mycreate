@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
+    <?php get_template_part('gtm','head');?>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,6 +41,7 @@
   </head>
 
   <body <?php if (is_home() || is_front_page()):?> class="home"<?php endif;?> >
+    <?php get_template_part('gtm','body');?>
 
     <!--loadingArea-->
     <?php if (is_home() || is_front_page()):?>
