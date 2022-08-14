@@ -869,7 +869,6 @@ html.no-touchevents {
 
 .blogImg {
   position:relative;
-  margin-bottom: 15px;
   &::before {
     content: '';
     position: absolute;
@@ -918,7 +917,7 @@ html.no-touchevents {
 .postDate, .modifiedDate {
   display: inline-block;
   font-size: 0.9rem;
-  margin: 0 3px 5px 15px;
+  margin: 0 3px 5px 0;
 }
 
 .category {
@@ -930,14 +929,18 @@ html.no-touchevents {
   border-radius: 2px;
 }
 
+.blogText {
+  padding: 15px;
+}
+
 .blogTitle {
   width: 100%;
   font-size: 1.02rem;
   font-weight: bold;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  padding: 0 15px 15px 15px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden; 
   &::before {
     content: map-get($icons,postH1);
     font-family: $fontAwesome;
