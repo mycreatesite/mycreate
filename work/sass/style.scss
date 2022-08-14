@@ -941,7 +941,8 @@ html.no-touchevents {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  word-break: break-all;
+  word-wrap : break-word;
+  overflow-wrap : break-word;
   &::before {
     content: map-get($icons,postH1);
     font-family: $fontAwesome;
