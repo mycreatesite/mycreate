@@ -13,7 +13,7 @@
 
 .login #login h1 a {
   width: 130px;
-  background-image: url(https://myscreate.com/wp-content/themes/mycreate/img/myc_logo_blk.svg);
+  background-image: url(https://myscreate.com/wp-content/themes/mycreate/common/img/myc_logo_blk.svg);
   background-size: unset;
   transition: transform 0.3s ease-in-out;
   margin: 0 auto 5px;
@@ -24,11 +24,16 @@
   opacity: 0.8;
 }
 
+.login .language-switcher {
+  display: none;
+}
+
 .login #login form {
   margin-top: 0;
   border-radius: 3px;
   background: rgba(255,255,255,0.7);
   padding: 50px;
+  border: none;
 }
 
 .login #login input:-webkit-autofill {
