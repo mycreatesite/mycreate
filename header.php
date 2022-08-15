@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#1e1e1e">
-    <title><?php if(!is_home()){wp_title(' - ',true,'right');}?><?php bloginfo('name');?></title>
+    <title><?php if(!is_home()){wp_title(' - ',true,'right');}?><?php if(is_home()){bloginfo('name');}?></title>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/common/css/reset.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/common/css/juicyslider.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/common/css/luminous-basic.css">
