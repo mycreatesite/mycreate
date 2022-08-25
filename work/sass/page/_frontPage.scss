@@ -1,0 +1,751 @@
+/*
+ ////////////////////////////////front-page////////////////////////////////
+*/
+
+/*
+ ////////////////mainVisual////////////////
+*/
+
+.mainVisual {
+  position: relative;
+  z-index: map-get($zIndexLayer, standardLay);
+  height: 850px;
+  color: #fff;
+  background-color: $bodyBg;
+  .container {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+}
+
+.proverbArea {
+  position: absolute;
+  left: 0;
+  top: 80px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  @extend %noUserSelect;
+}
+
+.proverb {
+  position: relative;
+  font-size: 2.5rem;
+  font-style: italic;
+  letter-spacing: 4px;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+    width: 70%;
+    height: 1px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.siteName {
+  font-size: 1.3rem;
+  letter-spacing: 0.8px;
+  margin-top: 10px;
+}
+
+.ornamentArea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  div {
+    transition: transform 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+}
+
+%ornSet {
+  position: absolute;
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+@mixin ornSetEach($LR, $posX, $posY, $size) {
+  #{$LR}: $posX;
+  top: $posY;
+  width: $size;
+  height: $size;
+}
+.ornament1 {
+  @extend %ornSet;
+  @include ornSetEach(left, 7%, 20%, 600px);
+}
+.ornament2 {
+  @extend %ornSet;
+  @include ornSetEach(right, 10%, 10%, 300px);
+}
+.ornament3 {
+  @extend %ornSet;
+  @include ornSetEach(right, 10%, 50%, 900px);
+}
+
+/*
+   ////////////////introduction////////////////
+  */
+
+.introduction {
+  .container {
+    max-width: 800px;
+  }
+  p {
+    text-align: left;
+    line-height: 2.3;
+  }
+  .moreArea {
+    text-align: center;
+  }
+}
+
+#commentAnim {
+  opacity: 0;
+  animation-duration: 1.3s;
+  margin-bottom: 60px;
+}
+
+/*
+   ////////////////skills////////////////
+  */
+
+.skillLayout {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.skill {
+  display: flex;
+  width: 48%;
+  padding: 40px;
+  margin-bottom: 30px;
+  background-color: #fff;
+  box-shadow: $themeShadow;
+  border-radius: 3px;
+  &:nth-of-type(even) {
+    margin-left: 4%;
+  }
+  img {
+    transition: filter 0.5s;
+  }
+  h3,
+  .skillName p {
+    transition: color 0.5s;
+  }
+}
+
+.skillName {
+  flex: 0 0 30%;
+  margin-right: 10%;
+  @extend %noUserSelect;
+  img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  p {
+    font-size: 1.1rem;
+    line-height: 1;
+  }
+}
+
+.skillDesc {
+  p {
+    text-align: left;
+    letter-spacing: 3px;
+    line-height: 1.7;
+  }
+}
+
+/*
+   ////////////////gallery////////////////
+  */
+
+.galleryLayout {
+  display: flex;
+}
+
+.galleryItem {
+  position: relative;
+  width: 48%;
+  margin-bottom: 60px;
+  box-shadow: $themeShadow;
+  border-radius: 3px;
+  + .galleryItem {
+    margin-left: 4%;
+  }
+  > a {
+    display: block;
+    &::after {
+      content: "PICKUP";
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      padding: 0.5rem 1rem;
+      background-color: #fff;
+      border-radius: 0 3px 0 0;
+      font-size: 0.75rem;
+      font-weight: bold;
+      transform: rotate(90deg) translateY(-100%);
+      transform-origin: left top;
+      transition: color 0.3s;
+    }
+    &:hover {
+      &::after {
+        color: $themeColor;
+      }
+    }
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+  &::after {
+    content: "detail";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    color: #fff;
+    padding: 5px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+  &:hover {
+    transform: translateY(2px);
+    box-shadow: $themeShadowHover;
+    &::before,
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+/*
+   ////////////////blog////////////////
+  */
+
+.blog .container {
+  padding-bottom: 110px;
+}
+
+.blogLayout {
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.blogItem {
+  position: relative;
+  width: 30%;
+  text-align: left;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: $themeShadow;
+  border-radius: 3px;
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  a {
+    display: block;
+  }
+  + .blogItem {
+    margin-left: 5%;
+  }
+}
+
+.blogImg {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 3px 3px 0 0;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.3s, transform 0.3s;
+    pointer-events: none;
+  }
+  &::after {
+    content: "read";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    padding: 5px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+}
+
+.blogItem:hover {
+  transform: translateY(2px);
+  box-shadow: $themeShadowHover;
+  .blogImg::before {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .blogImg::after {
+    opacity: 1;
+  }
+}
+
+.postDate,
+.modifiedDate {
+  display: inline-block;
+  font-size: 0.9rem;
+  margin: 0 3px 5px 0;
+}
+
+.category {
+  display: inline-block;
+  padding: 3px 5px 0;
+  margin-bottom: 5px;
+  font-size: 88%;
+  color: #fff;
+  border-radius: 2px;
+}
+
+.blogText {
+  padding: 15px;
+}
+
+.blogTitle {
+  width: 100%;
+  font-size: 1.02rem;
+  font-weight: bold;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  &::before {
+    content: map-get($icons, postH1);
+    font-family: $fontAwesome;
+    font-weight: bold;
+    margin-right: 5px;
+    color: $themeColor;
+  }
+}
+
+/*
+   ////////////////contact////////////////
+  */
+
+.contact {
+  position: relative;
+  z-index: map-get($zIndexLayer, underLay);
+  overflow: hidden; //filter:blur();対策
+  color: #fff;
+  .container {
+    padding-top: 170px;
+    position: relative;
+    z-index: 2;
+  }
+  &::before {
+    position: absolute;
+    z-index: 1;
+    content: "";
+    display: block;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  &::after,
+  .contactVideo {
+    transition: opacity 0.4s;
+  }
+  &.is-passive {
+    .contactVideo {
+      opacity: 0;
+    }
+    &::after {
+      opacity: 0;
+    }
+  }
+}
+
+.contactInner {
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    z-index: map-get($zIndexLayer, standardLay);
+    position: absolute;
+    border-right: 100vw solid transparent;
+  }
+  &::before {
+    top: 0;
+    border-top: 7vh solid $bodyBg;
+  }
+  &::after {
+    bottom: 0;
+    border-bottom: 7vh solid $footerBgColor;
+  }
+}
+
+.contactVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  filter: blur(6px);
+}
+
+.contactForm {
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.formItem {
+  font-size: 85%;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.formArea {
+  font-family: $fontRead;
+  width: 100%;
+  line-height: 2;
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  border: none;
+  outline: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: background-color 0.7s;
+}
+
+input.formArea {
+  height: 3rem;
+}
+
+textarea.formArea {
+  margin-bottom: 0;
+}
+
+.formArea:focus {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.announce {
+  font-size: 0.8rem;
+  padding: 25px;
+}
+
+/*
+ ////////////////////////////////////////////////////////////////////////////////////
+ ////////////////////////////////////tablet&mobile///////////////////////////////////
+ ////////////////////////////////////////////////////////////////////////////////////
+*/
+@media screen and (max-width: $tabspWidth) {
+  /*
+ ////////////////blog-tablet&mobile////////////////
+*/
+
+  .blogLayout {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .blogItem {
+    width: 100%;
+    margin-bottom: 30px;
+
+    > a {
+      width: 100%;
+      display: flex;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    + .blogItem {
+      margin-left: 0%;
+    }
+  }
+
+  .blogImg {
+    width: 25%;
+    min-width: 80px;
+    margin: 0;
+    &::before {
+      border-radius: 3px 0 0 3px;
+    }
+    img {
+      min-width: 120px;
+      min-height: 120px;
+    }
+  }
+
+  .blogText {
+    width: 75%;
+    padding: 2% 4%;
+  }
+
+  .postDate,
+  .category {
+    margin: 0 5px 5px 0;
+  }
+
+  .category {
+    vertical-align: 1px;
+  }
+
+  .blogTitle {
+    width: 100%;
+    font-size: 1.1rem;
+    white-space: normal;
+    padding: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  /*
+ ////////////////contact-tablet&mobile////////////////
+*/
+
+  .contact::after {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/contact_bg.jpg) center/cover no-repeat;
+    filter: blur(4px);
+  }
+
+  .contactVideo {
+    display: none;
+  }
+
+  .contactForm {
+    width: 90%;
+  }
+} //media screen
+
+/*
+ ////////////////////////////////////////////////////////////////////////////////////
+ ///////////////////////////////////////tablet///////////////////////////////////////
+ ////////////////////////////////////////////////////////////////////////////////////
+*/
+
+@media screen and (min-width: $spWidth) and (max-width: $tabspWidth) {
+  /*
+ ////////////////skills-tablet////////////////
+*/
+
+  .skill {
+    width: 100%;
+    &:nth-of-type(even) {
+      margin-left: 0;
+    }
+  }
+
+  .skillName {
+    margin-right: 5%;
+    img {
+      margin-bottom: 0px;
+    }
+    h3 {
+      font-size: 1rem;
+    }
+    p {
+      font-size: 0.9rem;
+      line-height: 1;
+    }
+  }
+
+  .skillDesc {
+    width: 65%;
+  }
+
+  /*
+ ////////////////gallery-tablet////////////////
+*/
+
+  .galleryItem + .galleryItem {
+    margin-left: 2%;
+  }
+} //media screen
+
+/*
+ ////////////////////////////////////////////////////////////////////////////////////
+ ///////////////////////////////////////mobile///////////////////////////////////////
+ ////////////////////////////////////////////////////////////////////////////////////
+*/
+
+@media screen and (max-width: $spWidth) {
+  /*
+ ////////////////mainVisual-mobile////////////////
+*/
+
+  .mainVisual {
+    height: calc(100vh - 183px);
+    min-height: 385px;
+  }
+
+  .proverb {
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    &::after {
+      left: -20px;
+      width: 80%;
+    }
+  }
+
+  .siteName {
+    font-size: 0.95rem;
+    letter-spacing: 0.7px;
+    margin-top: 8px;
+  }
+
+  .ornament3 {
+    display: none;
+  }
+
+  /*
+ ////////////////introduction-mobile////////////////
+*/
+
+  #commentAnim {
+    margin-bottom: 45px;
+  }
+
+  /*
+ ////////////////skills-mobile////////////////
+*/
+
+  .skillLayout {
+    margin-bottom: 15px;
+  }
+
+  .skill {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 9%;
+    &:nth-of-type(even) {
+      margin-left: 0%;
+    }
+  }
+
+  .skillName {
+    margin-right: 0%;
+    p {
+      margin-bottom: 20px;
+    }
+  }
+
+  .skillDesc {
+    width: 100%;
+    display: block;
+  }
+
+  /*
+ ////////////////gallery-mobile////////////////
+*/
+
+  .galleryLayout {
+    display: block;
+  }
+
+  .galleryItem {
+    width: 100%;
+    margin-bottom: 30px;
+    + .galleryItem {
+      margin-left: 0;
+      margin-bottom: 45px;
+    }
+  }
+
+  /*
+ ////////////////blog-mobile////////////////
+*/
+
+  .blogItem {
+    margin-bottom: 15px;
+    img {
+      min-width: 0px;
+      min-height: 0px;
+    }
+  }
+
+  .category {
+    font-size: 0.6rem;
+  }
+
+  .postDate,
+  .modifiedDate {
+    font-size: 0.8rem;
+  }
+
+  .blogTitle {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    &::before {
+      display: none;
+    }
+  }
+
+  .blogImg::after {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    padding: 2px 7px;
+  }
+} //media screen

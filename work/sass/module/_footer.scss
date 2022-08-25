@@ -1,0 +1,57 @@
+/*
+ ////////////////footer////////////////
+*/
+
+.footer {
+  position: relative;
+  z-index: map-get($zIndexLayer, standardLay);
+  text-align: center;
+  color: #fff;
+  background-color: $footerBgColor;
+}
+
+.snsIconS {
+  padding: 100px 0;
+}
+
+.snsIcon {
+  font-size: 1.5rem;
+  padding: 0 0.5rem;
+  transition: color 0.5s;
+  &:hover {
+    color: $themeColor;
+  }
+}
+
+.logo-footer {
+  width: 70px;
+  opacity: 0.8;
+  margin-bottom: 15px;
+  @extend %noUserSelect;
+}
+
+.copyright {
+  opacity: 0.8;
+  font-size: 75%;
+  letter-spacing: 0px;
+  padding-bottom: 50px;
+  + div {
+    font-size: 0;
+  }
+}
+
+/*
+ ////////////////////////////////////////////////////////////////////////////////////
+ ///////////////////////////////////////mobile///////////////////////////////////////
+ ////////////////////////////////////////////////////////////////////////////////////
+*/
+
+@media screen and (max-width: $spWidth) {
+  /*
+ ////////////////footer-mobile////////////////
+*/
+
+  .snsIcon {
+    padding: 0 0.4rem;
+  }
+} //media screen

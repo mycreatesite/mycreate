@@ -1,0 +1,261 @@
+/*
+ ////////////////////////////////2column////////////////////////////////
+*/
+/*
+ /////////////////main/////////////////
+*/
+
+.main {
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "";
+    display: block;
+    z-index: map-get($zIndexLayer, standardLay);
+    position: absolute;
+    bottom: 0;
+    border-right: 100vw solid transparent;
+    border-bottom: 7vh solid $footerBgColor;
+  }
+}
+
+.contentsWrap {
+  position: relative;
+  width: 90%;
+  max-width: $contMaxW-wide;
+  margin: 0 auto;
+  padding: 80px 0 160px;
+  text-align: center;
+}
+
+.mainContent {
+  float: left;
+  width: 75%;
+  margin-right: 7%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/*
+ ////////////////sidebar////////////////
+*/
+
+.sideLogo {
+  width: 40%;
+  margin: 0 auto 10px;
+  opacity: 0.9;
+  @extend %noUserSelect;
+  img {
+    width: 100%;
+    transform: rotate(-5deg);
+  }
+}
+
+.sideBar {
+  float: left;
+  width: 18%;
+  text-align: left;
+  ul {
+    list-style: none;
+    li {
+      line-height: 2;
+      position: relative;
+      left: 2px;
+      a {
+        transition: opacity 0.3s;
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+      &::before {
+        font-family: $fontAwesome;
+        content: map-get($icons, sideUl);
+        font-weight: bold;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.searchArea,
+.linkToAllArea,
+.categoryArea,
+.archiveArea {
+  margin-bottom: 40px;
+}
+
+.headingSide {
+  font-size: 1.4rem;
+  letter-spacing: 2.5px;
+  margin-bottom: 10px;
+}
+
+.searchInput {
+  font-family: $fontRead;
+  width: 100%;
+  padding: 0 10px;
+  border: none;
+  border-radius: 2px;
+  line-height: 2.5;
+  height: 50px;
+  background-color: #fff;
+  box-shadow: $themeShadow;
+}
+
+.searchForm {
+  position: relative;
+}
+
+.searchBtn {
+  position: absolute;
+  top: 15px;
+  left: -30px;
+  font-size: 1.3rem;
+  color: #1e1e1e;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  transition: color 0.3s, transform 0.3s;
+  &:hover {
+    color: $themeColor;
+    transform: scale(1.1);
+  }
+}
+
+.linkToAllArea {
+  .btnBlock + .btnBlock {
+    margin-top: 10px;
+  }
+}
+
+.btnBlock {
+  width: 100%;
+  padding: 10px;
+  letter-spacing: 2px;
+  font-weight: normal;
+  &:hover {
+    letter-spacing: 2px;
+  }
+}
+
+/*
+ ////////////////////////////////////////////////////////////////////////////////////
+ ////////////////////////////////////tablet&mobile///////////////////////////////////
+ ////////////////////////////////////////////////////////////////////////////////////
+*/
+
+@media screen and (max-width: $tabspWidth) {
+  /*
+ ////////////////////////////////2Column-tablet&mobile////////////////////////////////
+*/
+
+  .mainContent {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 50px;
+    float: none;
+  }
+
+  .sideBar {
+    width: 80%;
+    margin: 0 auto 50px;
+    float: none;
+  }
+
+  .searchInput {
+    padding-left: 45px;
+    line-height: 1.5;
+  }
+
+  .searchBtn {
+    top: 16px;
+    left: 10px;
+    font-size: 1.3rem;
+  }
+
+  .searchArea,
+  .linkToAllArea {
+    display: block;
+    margin: 0 auto 20px;
+  }
+
+  .linkToAllArea {
+    margin-bottom: 50px;
+  }
+
+  .categoryArea,
+  .archiveArea {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 0;
+  }
+
+  .archiveArea {
+    margin-left: 10%;
+  }
+
+  .archiveArea {
+    margin-left: 5%;
+  }
+
+  .noResults {
+    display: inline-block;
+    text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+  }
+} //media screen
+
+/*
+ ////////////////////////////////////////////////////////////////////////////////////
+ ///////////////////////////////////////tablet///////////////////////////////////////
+ ////////////////////////////////////////////////////////////////////////////////////
+*/
+
+@media screen and (min-width: $spWidth) and (max-width: $tabspWidth) {
+  /*
+ ////////////////////////////////2Column-tablet///////////////////////////////////////
+*/
+
+  .contentsWrap {
+    width: 90%;
+    padding: 80px 0 104px;
+  }
+
+  .sideLogo {
+    width: 12%;
+    margin: 0 auto 15px;
+  }
+} //media screen
+
+/*
+ ////////////////////////////////////////////////////////////////////////////////////
+ ///////////////////////////////////////mobile///////////////////////////////////////
+ ////////////////////////////////////////////////////////////////////////////////////
+*/
+
+@media screen and (max-width: $spWidth) {
+  /*
+ ////////////////////////////////2column-mobile///////////////////////////////////////
+*/
+
+  .sideBar {
+    width: 90%;
+  }
+
+  .contentsWrap {
+    width: 95%;
+    padding: 50px 0 100px;
+  }
+
+  .sideLogo {
+    width: 22%;
+    margin: 0 auto 15px;
+  }
+
+  .heading,
+  .headingSearch {
+    margin-bottom: 50px;
+  }
+} //media screen

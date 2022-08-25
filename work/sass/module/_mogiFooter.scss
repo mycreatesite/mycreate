@@ -1,0 +1,87 @@
+/*
+ ////////////////mogiFooter////////////////
+*/
+
+#mogiFooter {
+  display: none;
+  position: fixed;
+  z-index: map-get($zIndexLayer, upperLay);
+  left: 4%;
+  bottom: -2.6rem;
+  transform: translateY(100%);
+}
+
+.mogiFooterImg {
+  width: 8rem;
+  height: 155px;
+  transition: transform 0.2s;
+}
+
+.mogiFooterImg:hover {
+  transform: translateY(5px);
+}
+
+.helloMogi {
+  $stopPos: 50%;
+  $rotateVal: 4deg;
+  @keyframes helloMogi1 {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY($stopPos);
+    }
+  }
+  @keyframes helloMogi2 {
+    0% {
+      transform: translateY($stopPos) rotate(0deg);
+    }
+    20% {
+      transform: translateY($stopPos) rotate($rotateVal);
+    }
+    40% {
+      transform: translateY($stopPos) rotate(-$rotateVal);
+    }
+    60% {
+      transform: translateY($stopPos) rotate($rotateVal);
+    }
+    80% {
+      transform: translateY($stopPos) rotate(-$rotateVal);
+    }
+    100% {
+      transform: translateY($stopPos) rotate(0deg);
+    }
+  }
+  @keyframes helloMogi3 {
+    0% {
+      transform: translateY($stopPos) rotate(0deg);
+    }
+    100% {
+      transform: translateY(0%) rotate(-5deg);
+    }
+  }
+  animation: helloMogi1 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s forwards,
+    helloMogi2 0.7s linear 3s forwards,
+    helloMogi3 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 5s forwards;
+}
+
+/*
+ ////////////////////////////////////////////////////////////////////////////////////
+ ////////////////////////////////////tablet&mobile///////////////////////////////////
+ ////////////////////////////////////////////////////////////////////////////////////
+*/
+
+@media screen and (max-width: $tabspWidth) {
+/*
+ ////////////////mogiFooter-tablet&mobile////////////////
+*/
+
+  #mogiFooter {
+    bottom: -2rem;
+  }
+
+  .mogiFooterImg {
+    width: 6rem;
+    height: 123px;
+  }
+}

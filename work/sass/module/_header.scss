@@ -1,0 +1,226 @@
+/*
+ ////////////////header////////////////
+*/
+
+.header {
+  position: relative;
+  z-index: map-get($zIndexLayer, headerLay);
+  padding: 120px 0 72px;
+  text-align: center;
+  background-color: #fff;
+  .logoHeader {
+    a {
+      display: inline-block;
+    }
+  }
+  .keycolorTx {
+    color: $themeColor;
+  }
+}
+
+.subTxt {
+  font-size: 1.05rem;
+  @extend %noUserSelect;
+}
+
+.mycLogo {
+  width: 130px;
+  height: 65px;
+  opacity: 0;
+}
+
+.fillAnim {
+  fill: #303030;
+  stroke: transparent;
+  transition: all 0.5s ease-in;
+}
+
+.navHeader {
+  padding: 15px 0;
+  background-color: rgba(255,255,255,.7);
+  backdrop-filter: blur(10px);
+  ul li {
+    font-size: 1.3rem;
+    display: inline-block;
+    a {
+      display: inline-block;
+      padding: 5px 10px 0;
+      &::after {
+        display: block;
+        content: "";
+        width: 0%;
+        height: 2px;
+        background-color: #b5e9e8;
+        border-radius: 1px;
+        transition: width 0.2s;
+        margin-top: -2px;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.navHeader ul li.logoFollow {
+  display: none;
+  vertical-align: -40%;
+  a::after {
+    content: none;
+  }
+}
+
+.logoFollow img {
+  width: 80px;
+}
+
+.cloneNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.5s;
+  transform: translateY(-100%);
+}
+
+.isShow {
+  transform: translateY(0);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.spNavHeader,
+.hambBtn {
+  display: none;
+}
+
+/*
+ ////////////////////////////////////////////////////////////////////////////////////
+ ///////////////////////////////////////tablet///////////////////////////////////////
+ ////////////////////////////////////////////////////////////////////////////////////
+*/
+
+@media screen and (min-width: $spWidth) and (max-width: $tabspWidth) {
+  /*
+ ////////////////header-tablet////////////////
+*/
+
+  .navHeader ul li a {
+    padding: 5px 8px 0;
+  }
+} //media screen
+
+/*
+ ////////////////////////////////////////////////////////////////////////////////////
+ ///////////////////////////////////////mobile///////////////////////////////////////
+ ////////////////////////////////////////////////////////////////////////////////////
+*/
+
+@media screen and (max-width: $spWidth) {
+  /*
+ ////////////////header-mobile////////////////
+*/
+
+  .header {
+    padding: 64px 0 32px;
+  }
+
+  .mycLogo {
+    width: 110px;
+    height: 55px;
+  }
+
+  .navHeader {
+    display: none;
+  }
+
+  .spNavHeader {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translate3d(20px, -20px, 0);
+    font-size: 1.15rem;
+    letter-spacing: 3.5px;
+    color: #fff;
+    background-color: rgb(30, 30, 30);
+    transition: transform 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    &.is-show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .spNavHeader ul {
+    margin-top: 20%;
+    li {
+      display: none;
+      a {
+        display: block;
+        padding: 13px;
+      }
+    }
+  }
+
+  .logoSpNav img {
+    width: 90px;
+    padding-right: 0px;
+  }
+
+  .hambBtn {
+    display: block;
+    position: fixed;
+    top: 6%;
+    right: 8%;
+    width: 27px;
+    padding: 10px;
+  }
+
+  .hambBtn1,
+  .hambBtn2,
+  .hambBtn3 {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #1e1e1e;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .hambBtn1 {
+    top: 0;
+    left: 0;
+  }
+
+  .hambBtn2 {
+    top: 8px;
+    right: 1px;
+    width: 85%;
+  }
+
+  .hambBtn3 {
+    top: 16px;
+    left: 0;
+  }
+
+  .hambMove1 {
+    transform: translateY(8px) rotate(405deg);
+    box-shadow: none;
+    background-color: #fff;
+  }
+
+  .hambMove2 {
+    transform: translateX(400%);
+    background-color: #fff;
+  }
+
+  .hambMove3 {
+    transform: translateY(-8px) rotate(-405deg);
+    box-shadow: none;
+    background-color: #fff;
+  }
+
+  .subTxt {
+    font-size: 0.8rem;
+  }
+} //media screen

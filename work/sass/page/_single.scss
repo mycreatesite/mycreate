@@ -1,0 +1,418 @@
+/*
+ ////////////////////////////////single////////////////////////////////
+*/
+
+.articleArea {
+  padding: 80px 64px;
+  margin-bottom: 20px;
+  text-align: left;
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: $themeShadow;
+  .dateArea {
+    margin-bottom: 40px;
+    text-align: right;
+  }
+  .postDate,
+  .modifiedDate {
+    display: block;
+    margin: 0;
+  }
+  .category {
+    margin: 20px 0;
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.articleAreaBlogTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  &::before {
+    content: map-get($icons, postH1);
+    font-family: $fontAwesome;
+    font-weight: bold;
+    margin-right: 10px;
+    color: $themeColor;
+  }
+  .type-gallery &::before {
+    color: $galleryColor;
+  }
+}
+
+.aligncenter {
+  text-align: center;
+}
+
+img.aligncenter {
+  margin: 0 auto;
+}
+
+.articleAreaBody {
+  font-family: $fontRead;
+  color: $articleFontColor;
+}
+
+.articleAreaBody a {
+  color: #2d9896;
+  padding: 0 3px;
+  transition: opacity 0.3s;
+  &:hover {
+    opacity: 0.7;
+  }
+  &::after {
+    content: map-get($icons, postLink);
+    font-family: $fontAwesome;
+    font-weight: bold;
+    margin-left: 2px;
+  }
+}
+
+.articleAreaBody img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.articleAreaBody p {
+  line-height: 2;
+}
+
+.articleAreaBody h2,
+.articleAreaBody h3,
+.articleAreaBody h4 {
+  margin-bottom: 10px;
+  line-height: 1.8;
+}
+
+.articleAreaBody h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border-bottom: solid 2px $themeColor;
+  position: relative;
+  padding-bottom: 10px;
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    border-bottom: solid 2px $blogHeadingColor;
+    bottom: -2px;
+    width: 30%;
+  }
+}
+
+.articleAreaBody h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding-bottom: 2px;
+  border-bottom: dashed 1px $blogHeadingColor;
+  padding-bottom: 10px;
+  &::before {
+    content: map-get($icons, postH3);
+    font-family: $fontAwesome;
+    margin-right: 5px;
+    color: $blogHeadingColor;
+    font-weight: normal;
+  }
+}
+
+.articleAreaBody h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  &::before {
+    content: map-get($icons, postH4);
+    font-family: $fontAwesome;
+    margin-right: 5px;
+    font-weight: bold;
+  }
+}
+
+.articleAreaBody h5 {
+  position: relative;
+  display: inline-block;
+  padding: 20px;
+  margin: 1.5rem;
+  background-color: $bodyBg;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  &::before {
+    position: absolute;
+    content: map-get($icons, postH5);
+    left: -5px;
+    top: -15px;
+    font-family: $fontAwesome;
+    color: #a5a5a5;
+    font-size: 1.5rem;
+  }
+}
+
+.articleAreaBody ul,
+.articleAreaBody ol {
+  display: inline-block;
+  margin: 1.5rem;
+}
+
+.articleAreaBody ul {
+  border: solid 2px #b5e9e8;
+  border-radius: 3px;
+  padding: 1.5em 1.5em 1.5em 45px;
+  position: relative;
+  li {
+    line-height: 1.5;
+    padding: 0.5em 0;
+    list-style-type: none;
+    &::before {
+      font-family: $fontAwesome;
+      font-weight: bold;
+      content: map-get($icons, postUl);
+      position: absolute;
+      left: 1.5em;
+      color: $themeColor;
+    }
+  }
+}
+
+.articleAreaBody ol {
+  counter-reset: number;
+  list-style-type: none;
+  padding: 1.7em 1em;
+  border-radius: 3px;
+  border: solid 2px #b5e9e8;
+  li {
+    position: relative;
+    line-height: 1.5em;
+    padding: 0.5em 0.5em 0.5em 33px;
+    &::before {
+      position: absolute;
+      counter-increment: number;
+      content: counter(number);
+      display: inline-block;
+      background: $themeColor;
+      color: #fff;
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 0.7rem;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      line-height: 21px;
+      padding-left: 0.5px;
+      margin-left: 2px;
+      border-radius: 2px;
+      text-align: center;
+    }
+  }
+}
+
+.articleAreaBody hr {
+  border-top-color: #e5e5e5;
+}
+
+.articleAreaBody pre,
+.articleAreaBody blockquote {
+  padding: 20px;
+  margin: 1.5rem;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  font-family: $fontRead;
+}
+
+.articleAreaBody pre {
+  display: block;
+  line-height: 2;
+  background-color: #333a46;
+  color: #dcdfe6;
+  word-wrap: normal;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.articleAreaBody blockquote {
+  display: inline-block;
+  position: relative;
+  background-color: $bodyBg;
+  &::before,
+  &::after {
+    font-family: $fontAwesome;
+    font-weight: bold;
+    color: #a5a5a5;
+    font-size: 1.5rem;
+    position: absolute;
+  }
+  &::before {
+    content: map-get($icons, postBQbefore);
+    left: -15px;
+    top: -10px;
+  }
+  &::after {
+    content: map-get($icons, postBQafter);
+    right: -15px;
+    bottom: -10px;
+  }
+}
+
+.articleAreaBody iframe {
+  width: 100%;
+  border-radius: 3px;
+}
+
+.articleAreaBody .gist tbody tr {
+  border-bottom: 2px dashed rgb(245, 245, 245);
+}
+
+.articleAreaBody .gist tbody tr:last-child {
+  border: none;
+}
+
+.prevNext p {
+  display: inline-block;
+  font-size: 1.2rem;
+  letter-spacing: 2.5px;
+  padding: 0 10px;
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.6;
+  }
+  &.noPage {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}
+
+/* /////Imagelink  control in article///// */
+a.noContents {
+  display: block;
+  padding: 0;
+  &::after {
+    content: none;
+  }
+}
+
+.animationControl {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.hoverImg {
+  transition: opacity 0.3s;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+/*
+ ////////////////////////////////////////////////////////////////////////////////////
+ ////////////////////////////////////tablet&mobile///////////////////////////////////
+ ////////////////////////////////////////////////////////////////////////////////////
+*/
+
+@media screen and (max-width: $tabspWidth) {
+  /*
+ ////////////////////////////////single-tablet&mobile////////////////////////////////
+*/
+  .articleArea {
+    font-size: 1rem;
+    .category {
+      margin-bottom: 0;
+    }
+  }
+
+  .gist {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .gist .blob-num,
+  .gist .blob-code {
+    font-size: 14px !important;
+  }
+} //media screen
+
+/*
+ ////////////////////////////////////////////////////////////////////////////////////
+ ///////////////////////////////////////tablet///////////////////////////////////////
+ ////////////////////////////////////////////////////////////////////////////////////
+*/
+
+@media screen and (min-width: $spWidth) and (max-width: $tabspWidth) {
+  /*
+ ////////////////////////////////single-tablet///////////////////////////////////////
+*/
+  .articleArea .category {
+    margin-top: 20px;
+  }
+
+  .prevNext p {
+    font-size: 1.3rem;
+  }
+} //media screen
+
+/*
+ ////////////////////////////////////////////////////////////////////////////////////
+ ///////////////////////////////////////mobile///////////////////////////////////////
+ ////////////////////////////////////////////////////////////////////////////////////
+*/
+
+@media screen and (max-width: $spWidth) {
+  /*
+ ////////////////////////////////single-mobile///////////////////////////////////////
+*/
+
+  .articleArea {
+    padding: 50px 3%;
+    .category {
+      font-size: 0.8rem;
+      margin-top: 17px;
+    }
+  }
+
+  .articleAreaBlogTitle {
+    font-size: 1.3rem;
+    &::before {
+      margin-right: 5px;
+    }
+  }
+
+  .articleAreaBody {
+    h2 {
+      font-size: 1.3rem;
+    }
+    h3 {
+      font-size: 1.2rem;
+    }
+    h4 {
+      font-size: 1.1rem;
+    }
+    h2,
+    h3,
+    h4 {
+      letter-spacing: 1.5px;
+    }
+    h5,
+    ul,
+    ol,
+    pre,
+    blockquote {
+      margin: 1.5rem 0;
+    }
+    blockquote {
+      &::before {
+        left: -5px;
+      }
+      &::after {
+        right: -5px;
+      }
+    }
+  }
+
+  .prevNext p {
+    font-size: 1.3rem;
+  }
+}

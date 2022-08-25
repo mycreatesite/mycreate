@@ -1,0 +1,33 @@
+/*
+ /////////////////////////////single-gallery/////////////////////////////
+*/
+
+.galleryAreaBody {
+  font-family: $fontBase;
+}
+
+.galleryImg {
+  margin-bottom: 30px;
+}
+
+.galleryProduct,
+.galleryClient,
+.galleryCategory,
+.galleryIdea {
+  margin-bottom: 5px;
+}
+
+.galleryfieldBg {
+  display: inline-block;
+  width: 70px;
+  padding: 3px 5px;
+  color: #fff;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  text-align: center;
+  background-color: $galleryColor;
+  border-radius: 1px;
+  margin-bottom: 1rem;
+  @extend %noUserSelect;
+}

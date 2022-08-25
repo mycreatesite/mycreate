@@ -1,0 +1,47 @@
+/*
+ ////////////////mouse stalker////////////////
+*/
+
+html.no-touchevents {
+  body,
+  a {
+    cursor: none;
+  }
+  #cursor {
+    transform: translate(0, 0);
+    pointer-events: none;
+    position: fixed;
+    top: -4px;
+    left: -4px;
+    width: 8px;
+    height: 8px;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 50%;
+    z-index: map-get($zIndexLayer, cursorLay);
+    transition: background-color 0.3s, width 0.3s, height 0.3s, top 0.3s,
+      left 0.3s;
+
+    &.is-hovered {
+      top: -16px;
+      left: -16px;
+      width: 32px;
+      height: 32px;
+      background-color: rgba($themeColor, 0.75);
+    }
+  }
+
+  #stalker {
+    transform: translate3d(0, 0, 0);
+    pointer-events: none;
+    position: fixed;
+    top: -16px;
+    left: -16px;
+    width: 32px;
+    height: 32px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    z-index: map-get($zIndexLayer, stalkerLay);
+    transition: transform 0.3s;
+    transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+  }
+}

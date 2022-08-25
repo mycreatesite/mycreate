@@ -1,0 +1,237 @@
+//////////////////////////// theme settings ////////////////////////////
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*::selection {
+  background: $selectionBg;
+}
+
+*::-moz-selection {
+  background: $selectionBg;
+}
+
+html,
+body {
+  width: 100%;
+  font-size: 95%;
+  color: $themeFontColor;
+  font-family: $fontBase;
+  letter-spacing: 1.5px;
+  line-height: 1.5;
+  font-variant-ligatures: none;
+  background-color: $bodyBg;
+}
+
+body {
+  @-webkit-keyframes pageFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes pageFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  -webkit-animation: pageFadeIn 1s ease 0s 1 normal;
+  animation: pageFadeIn 1s ease 0s 1 normal;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: $fontBase;
+  font-size: 16px;
+}
+
+textarea {
+  overflow: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.keycolorTx {
+  color: $themeColor;
+}
+
+.keycolorBg {
+  background-color: $themeColor;
+}
+
+.boldTx {
+  font-weight: bold;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  line-height: 1.5;
+  padding: 8px 35px;
+  border: 1px solid #1e1e1e;
+  border-radius: 2px;
+  background-color: transparent;
+  // cursor: pointer;
+  transition: all 0.2s;
+  @extend %noUserSelect;
+  &:hover {
+    letter-spacing: 4px;
+    background-color: $themeBtnColorHover;
+    color: #fff;
+    border-color: $themeBtnColorHover;
+  }
+}
+
+.type-gallery .btn:hover {
+  background-color: $galleyBtnColorHover;
+  border-color: $galleyBtnColorHover;
+}
+
+.btn:active {
+  position: relative;
+  top: 2px;
+}
+
+.turnWhite {
+  border-color: #fff;
+  color: #fff;
+}
+
+.heading,
+.headingSearch {
+  font-size: 1.9rem;
+  letter-spacing: 2.7px;
+  margin-bottom: 80px;
+  opacity: 0;
+  @extend %noUserSelect;
+}
+
+.headingSearch {
+  opacity: unset;
+}
+
+.container {
+  width: 70%;
+  max-width: $contMaxW-narrow;
+  padding: 110px 0 170px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contentsFrame {
+  overflow: hidden;
+}
+.contentsFrame:nth-of-type(odd) {
+  position: relative;
+  z-index: map-get($zIndexLayer, standardLay);
+  background-color: $bodyBg;
+}
+
+.contentsFrame:nth-of-type(even) {
+  position: relative;
+  z-index: map-get($zIndexLayer, standardLay);
+  background-color: #fff;
+}
+
+.contentsFrame:nth-of-type(even)::before {
+  content: "";
+  display: block;
+  z-index: map-get($zIndexLayer, standardLay);
+  position: absolute;
+  bottom: 0;
+  border-right: 100vw solid transparent;
+  border-bottom: 7vh solid $bodyBg;
+}
+
+.contentsFrame:nth-of-type(odd)::before {
+  content: "";
+  display: block;
+  z-index: map-get($zIndexLayer, standardLay);
+  position: absolute;
+  bottom: 0;
+  border-left: 100vw solid transparent;
+  border-bottom: 7vh solid #fff;
+}
+
+.contentsFrame {
+  &.bottomFlip {
+    &::before {
+      content: none;
+    }
+  }
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.grecaptcha-badge {
+  z-index: map-get($zIndexLayer, recaptchaLay);
+  opacity: 0.8;
+  bottom: 0 !important;
+}
+
+/*
+ ////////////////////////////////////////////////////////////////////////////////////
+ ///////////////////////////////////////tablet&mobile////////////////////////////////
+ ////////////////////////////////////////////////////////////////////////////////////
+*/
+
+@media screen and (max-width: $tabspWidth) {
+  html,
+  body {
+    font-size: 95%;
+    position: relative;
+    -webkit-text-size-adjust: 100%;
+  }
+} //media screen
+
+/*
+ ////////////////////////////////////////////////////////////////////////////////////
+ ///////////////////////////////////////tablet///////////////////////////////////////
+ ////////////////////////////////////////////////////////////////////////////////////
+*/
+
+@media screen and (min-width: $spWidth) and (max-width: $tabspWidth) {
+  .container {
+    width: 80%;
+  }
+} //media screen
+
+/*
+ ////////////////////////////////////////////////////////////////////////////////////
+ ///////////////////////////////////////mobile///////////////////////////////////////
+ ////////////////////////////////////////////////////////////////////////////////////
+*/
+
+@media screen and (max-width: $spWidth) {
+  .container {
+    width: 90%;
+    .blog & {
+      width: 95%;
+    }
+  }
+} //media screen
