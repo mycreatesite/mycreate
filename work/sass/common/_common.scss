@@ -234,4 +234,8 @@ a {
       width: 95%;
     }
   }
+  #awwwards {
+    transform: translateY(-50%) scale(.5)!important;
+    transform-origin: right!important;
+  }
 } //media screen
