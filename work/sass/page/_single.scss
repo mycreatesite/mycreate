@@ -6,7 +6,7 @@
   padding: 80px 64px;
   margin-bottom: 20px;
   text-align: left;
-  border-radius: 3px;
+  border-radius: $borderRadius;
   background-color: #fff;
   box-shadow: $themeShadow;
   .dateArea {
@@ -138,7 +138,7 @@ img.aligncenter {
   padding: 20px;
   margin: 1.5rem;
   background-color: $bodyBg;
-  border-radius: 3px;
+  border-radius: $borderRadius;
   font-size: 0.9rem;
   &::before {
     position: absolute;
@@ -159,7 +159,7 @@ img.aligncenter {
 
 .articleAreaBody ul {
   border: solid 2px #b5e9e8;
-  border-radius: 3px;
+  border-radius: $borderRadius;
   padding: 1.5em 1.5em 1.5em 45px;
   position: relative;
   li {
@@ -181,7 +181,7 @@ img.aligncenter {
   counter-reset: number;
   list-style-type: none;
   padding: 1.7em 1em;
-  border-radius: 3px;
+  border-radius: $borderRadius;
   border: solid 2px #b5e9e8;
   li {
     position: relative;
@@ -216,7 +216,7 @@ img.aligncenter {
 .articleAreaBody blockquote {
   padding: 20px;
   margin: 1.5rem;
-  border-radius: 3px;
+  border-radius: $borderRadius;
   font-size: 0.9rem;
   font-family: $fontRead;
 }
@@ -257,7 +257,7 @@ img.aligncenter {
 
 .articleAreaBody iframe {
   width: 100%;
-  border-radius: 3px;
+  border-radius: $borderRadius;
 }
 
 .articleAreaBody .gist tbody tr {

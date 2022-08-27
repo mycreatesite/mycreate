@@ -19,13 +19,14 @@
 }
 
 .subTxt {
-  font-size: 1.05rem;
+  font-size: 1rem;
+  font-weight: 300;
   @extend %noUserSelect;
 }
 
 .mycLogo {
-  width: 130px;
-  height: 65px;
+  width: 120px;
+  height: 60px;
   opacity: 0;
 }
 
@@ -40,8 +41,9 @@
   background-color: rgba(255,255,255,.7);
   backdrop-filter: blur(10px);
   ul li {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     display: inline-block;
+    letter-spacing: 2px;
     a {
       display: inline-block;
       padding: 5px 10px 0;

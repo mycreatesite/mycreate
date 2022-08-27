@@ -95,7 +95,7 @@ $(() => {
 		if (commentAnim.length) {
 			const myCommentPoint = commentAnim.offset().top;
 			if (scroll > myCommentPoint - windowHeight) {
-				commentAnim.css('opacity', 1).addClass('animated zoomInDown');
+				commentAnim.css('opacity', 1).addClass('is-active');
 			}
 		}
 		//rollBack_func

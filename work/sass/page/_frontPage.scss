@@ -24,7 +24,6 @@
   position: absolute;
   left: 0;
   top: 80px;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   @extend %noUserSelect;
 }
 
@@ -32,24 +31,13 @@
   position: relative;
   font-size: 2.5rem;
   font-style: italic;
-  letter-spacing: 4px;
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    background-color: #fff;
-    bottom: 0;
-    left: 0;
-    width: 70%;
-    height: 1px;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-  }
+  letter-spacing: 3px;
 }
 
 .siteName {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   letter-spacing: 0.8px;
-  margin-top: 10px;
+  text-align: left;
 }
 
 .ornamentArea {
@@ -109,8 +97,15 @@
 
 #commentAnim {
   opacity: 0;
-  animation-duration: 1.3s;
   margin-bottom: 60px;
+  transition-property: transform opacity;
+  transition-duration: 3s;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transform: translateY(50px) rotate(4deg) skewX(-10deg);
+  transform-origin: left top;
+  &.is-active {
+    transform: translateY(0) rotate(0deg) skewX(0);
+  }
 }
 
 /*
@@ -130,7 +125,7 @@
   margin-bottom: 30px;
   background-color: #fff;
   box-shadow: $themeShadow;
-  border-radius: 3px;
+  border-radius: $borderRadius;
   &:nth-of-type(even) {
     margin-left: 4%;
   }
@@ -145,19 +140,19 @@
 
 .skillName {
   flex: 0 0 30%;
-  margin-right: 10%;
+  margin-right: 4%;
   @extend %noUserSelect;
   img {
-    width: 80px;
+    width: 72px;
     height: auto;
     margin-bottom: 10px;
   }
   h3 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: bold;
   }
   p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1;
   }
 }
@@ -165,8 +160,7 @@
 .skillDesc {
   p {
     text-align: left;
-    letter-spacing: 3px;
-    line-height: 1.7;
+    line-height: 2;
   }
 }
 
@@ -183,7 +177,7 @@
   width: 48%;
   margin-bottom: 60px;
   box-shadow: $themeShadow;
-  border-radius: 3px;
+  border-radius: $borderRadius;
   + .galleryItem {
     margin-left: 4%;
   }
@@ -213,7 +207,7 @@
     display: block;
     width: 100%;
     height: auto;
-    border-radius: 3px;
+    border-radius: $borderRadius;
   }
   &::before {
     content: "";
@@ -223,7 +217,7 @@
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 3px;
+    border-radius: $borderRadius;
     opacity: 0;
     transition: opacity 0.3s;
     pointer-events: none;
@@ -275,7 +269,7 @@
   overflow: hidden;
   background-color: #fff;
   box-shadow: $themeShadow;
-  border-radius: 3px;
+  border-radius: $borderRadius;
   img {
     display: block;
     width: 100%;
@@ -460,7 +454,7 @@
   font-family: $fontRead;
   width: 100%;
   line-height: 2;
-  border-radius: 3px;
+  border-radius: $borderRadius;
   padding: 0 10px;
   margin-bottom: 10px;
   border: none;

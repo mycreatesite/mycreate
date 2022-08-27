@@ -20,7 +20,7 @@ body {
   font-size: 95%;
   color: $themeFontColor;
   font-family: $fontBase;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   line-height: 1.5;
   font-variant-ligatures: none;
   background-color: $bodyBg;
@@ -84,19 +84,20 @@ a {
 .btn {
   display: inline-block;
   text-align: center;
-  font-size: 1.2rem;
-  font-weight: 300;
-  letter-spacing: 3px;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 2px;
   line-height: 1.5;
-  padding: 8px 35px;
+  min-width: 180px;
+  padding: 12px 35px 10px;
   border: 1px solid #1e1e1e;
-  border-radius: 2px;
+  border-radius: 999px;
   background-color: transparent;
   // cursor: pointer;
   transition: all 0.2s;
   @extend %noUserSelect;
   &:hover {
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     background-color: $themeBtnColorHover;
     color: #fff;
     border-color: $themeBtnColorHover;

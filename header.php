@@ -92,7 +92,7 @@
     <header class="header">
       <?php if (is_home() || is_front_page()):?><h1 class="logoHeader"><?php else:?><p class="logoHeader"><?php endif;?>
         <a href="<?php echo home_url();?>">
-          <svg version="1.1" id="mycLogo" class="mycLogo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 634.471 316.48" width="130" height="65">
+          <svg version="1.1" id="mycLogo" class="mycLogo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 634.471 316.48" width="120" height="60">
             <title>ma-ya's CREATE [まーやずくりえいと]</title>
             <g stroke="#282828" stroke-width="1.5" fill="transparent">
               <path id="m_1_" d="M339.75,65.099V44.163c0-2.896,1-5.33,2.644-7.303

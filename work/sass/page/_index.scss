@@ -9,7 +9,7 @@
   padding: 40px 30px;
   margin-bottom: 25px;
   text-align: left;
-  border-radius: 3px;
+  border-radius: $borderRadius;
   background-color: #fff;
   box-shadow: $themeShadow;
   &:hover {
@@ -48,7 +48,7 @@
     display: block;
     width: 100%;
     height: auto;
-    border-radius: 3px;
+    border-radius: $borderRadius;
   }
 }
 
