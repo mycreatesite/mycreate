@@ -78,7 +78,7 @@
           </div>
         </div>
         <!-- <p class="moreArea"><a class="btn" href="/wp-content/themes/mycreate/pages/wicd/" target="_blank">features</a></p> -->
-        <p class="moreArea"><a class="btn" href="https://myscreate-wicd-nuxt.web.app/" target="_blank">features</a></p>
+        <p class="moreArea"><a class="btn" href="https://wicd-02-next.vercel.app/" target="_blank">features</a></p>
       </div>
     </section>
 
